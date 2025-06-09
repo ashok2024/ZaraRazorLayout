@@ -1,0 +1,98 @@
+﻿
+<EditForm Model="@campaignModel" OnValidSubmit="HandleValidSubmit">
+    <div class="container-fluid mt-3">
+        <div class="row g-3">
+            <!-- Left Column -->
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="CampaignName" class="form-label fw-semibold">Campaign Name <span class="text-danger">*</span></label>
+                    <InputText id="CampaignName" class="form-control rounded-2 border-secondary" @bind-Value="campaignModel.CampaignName" placeholder="Campaign name" />
+                </div>
+                <div class="form-group mt-3">
+                    <label for="CreatedBy" class="form-label fw-semibold">Created By</label>
+                    <InputSelect id="CreatedBy" class="form-select rounded-2 border-secondary" @bind-Value="campaignModel.CreatedBy">
+                        <option value="">-- Select User --</option>
+                        <option value="Jane">Jane Doe</option>
+                        <option value="John">John Smith</option>
+                    </InputSelect>
+                </div>
+                <div class="form-group mt-3">
+                    <label for="CriticalPath" class="form-label fw-semibold">Critical Path</label>
+                    <InputText id="CriticalPath" class="form-control rounded-2 border-secondary" @bind-Value="campaignModel.CriticalPath" placeholder="Small Campaign" />
+                </div>
+                <div class="form-group mt-3">
+                    <label for="DeliveryDate" class="form-label fw-semibold">Delivery Date <span class="text-danger">*</span></label>
+                    <InputDate id="DeliveryDate" class="form-control rounded-2 border-secondary" @bind-Value="campaignModel.DeliveryDate" />
+                </div>
+            </div>
+
+            <!-- Middle Column -->
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="NotifySupplierDate" class="form-label fw-semibold">Notify Supplier</label>
+                    <InputDate id="NotifySupplierDate" class="form-control rounded-2 border-secondary" @bind-Value="campaignModel.NotifySupplierDate" />
+                </div>
+                <div class="form-group mt-3">
+                    <label for="SendToSupplierDate" class="form-label fw-semibold">Send To Supplier</label>
+                    <InputDate id="SendToSupplierDate" class="form-control rounded-2 border-secondary" @bind-Value="campaignModel.SendToSupplierDate" />
+                </div>
+                <div class="form-group mt-3">
+                    <label for="DraftArtworkDate" class="form-label fw-semibold">1st Draft of Artwork</label>
+                    <InputDate id="DraftArtworkDate" class="form-control rounded-2 border-secondary" @bind-Value="campaignModel.DraftArtworkDate" />
+                </div>
+                <div class="form-group mt-3">
+                    <label for="CostApprovalDate" class="form-label fw-semibold">Cost Approval Date</label>
+                    <InputDate id="CostApprovalDate" class="form-control rounded-2 border-secondary" @bind-Value="campaignModel.CostApprovalDate" />
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="StartDate" class="form-label fw-semibold">Start Date</label>
+                    <InputDate id="StartDate" class="form-control rounded-2 border-secondary" @bind-Value="campaignModel.StartDate" />
+                </div>
+                <div class="form-group mt-3">
+                    <label for="EndDate" class="form-label fw-semibold">End Date</label>
+                    <InputDate id="EndDate" class="form-control rounded-2 border-secondary" @bind-Value="campaignModel.EndDate" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="d-flex justify-content-end mt-4">
+            <button type="button" class="btn btn-outline-secondary me-2 px-4" @onclick="HandleCancel">Cancel</button>
+            <button type="submit" class="btn btn-primary px-4">Save</button>
+        </div>
+    </div>
+</EditForm>
+
+@code {
+    private CampaignModel campaignModel = new();
+    [Parameter]
+    public EventCallback OnCancelClicked { get; set; }
+    private void HandleValidSubmit()
+    {
+        // Save logic here
+    }
+
+    private void HandleCancel()
+    {
+        OnCancelClicked.InvokeAsync();
+    }
+
+    public class CampaignModel
+    {
+        public string? CampaignName { get; set; }
+        public string? CreatedBy { get; set; }
+        public string? CriticalPath { get; set; }
+        public DateTime? DeliveryDate { get; set; }
+        public DateTime? NotifySupplierDate { get; set; }
+        public DateTime? SendToSupplierDate { get; set; }
+        public DateTime? DraftArtworkDate { get; set; }
+        public DateTime? CostApprovalDate { get; set; }
+        public DateTime? StartDate { get; set; }
+        public DateTime? EndDate { get; set; }
+    }
+}
+

@@ -1,0 +1,335 @@
+﻿.i-phone-13-mini-2,
+.i-phone-13-mini-2 * {
+    box-sizing: border-box;
+}
+
+.i-phone-13-mini-2 {
+    background: #ffffff;
+    height: 812px;
+    position: relative;
+    overflow: hidden;
+}
+
+.frame-5 {
+    width: 377px;
+    height: 812px;
+    position: absolute;
+    left: -375px;
+    top: 0px;
+}
+
+.rectangle-156020 {
+    background: var(--primary, #1c3258);
+    border-style: solid;
+    border-color: transparent;
+    border-width: 0.8px;
+    width: 375px;
+    height: 812px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.path-815 {
+    width: 88.05px;
+    height: 37.04px;
+    position: absolute;
+    left: 12.72px;
+    top: 35.06px;
+    overflow: visible;
+}
+
+.frame-19 {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 230px;
+    position: absolute;
+    left: 12px;
+    top: 92px;
+}
+
+.option {
+    border-radius: 8px;
+    padding: 8px 12px 8px 12px;
+    display: flex;
+    flex-direction: row;
+    gap: 97px;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    height: 43px;
+    position: relative;
+    overflow: hidden;
+}
+
+.frame-6 {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.dashboard {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    overflow: visible;
+    aspect-ratio: 1;
+}
+
+.dashboard2 {
+    color: #ffffff;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+}
+
+.option-with-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.option2 {
+    border-radius: 8px;
+    padding: 8px 12px 8px 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    align-self: stretch;
+    flex-shrink: 0;
+    height: 43px;
+    position: relative;
+    overflow: hidden;
+}
+
+.paper-plane-tilt {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    overflow: visible;
+    aspect-ratio: 1;
+}
+
+.caret-down {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    overflow: visible;
+    aspect-ratio: 1;
+}
+
+.folder-simple {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    overflow: visible;
+    aspect-ratio: 1;
+}
+
+.circles-three {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    overflow: visible;
+    aspect-ratio: 1;
+}
+
+.shopping-cart-simple {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    overflow: visible;
+    aspect-ratio: 1;
+}
+
+.caret-down2 {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    overflow: visible;
+    aspect-ratio: 1;
+}
+
+.file {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    overflow: visible;
+    aspect-ratio: 1;
+}
+
+.pen {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    overflow: visible;
+    aspect-ratio: 1;
+}
+
+.caret-down3 {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    overflow: visible;
+    aspect-ratio: 1;
+}
+
+.shopping-cart-simple2 {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    overflow: visible;
+    aspect-ratio: 1;
+}
+
+.caret-down4 {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    overflow: visible;
+    aspect-ratio: 1;
+}
+
+.shopping-cart-simple3 {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    overflow: visible;
+    aspect-ratio: 1;
+}
+
+.caret-down5 {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    overflow: visible;
+    aspect-ratio: 1;
+}
+
+.gear-six {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    overflow: visible;
+    aspect-ratio: 1;
+}
+
+.caret-down6 {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    overflow: visible;
+    aspect-ratio: 1;
+}
+
+.group-175461 {
+    position: absolute;
+    inset: 0;
+}
+
+.rectangle-156023 {
+    background: var(--white, #ffffff);
+    border-radius: 7.97px;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 0.8px;
+    opacity: 0.1;
+    width: 351px;
+    height: 54px;
+    position: absolute;
+    left: 12px;
+    top: 705px;
+}
+
+.group-175460 {
+    width: 31.87px;
+    height: 31.87px;
+    position: absolute;
+    left: 17.53px;
+    top: 716.38px;
+    overflow: visible;
+}
+
+.jane-doe {
+    color: #ffffff;
+    text-align: left;
+    font-family: "Nunito-Medium", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    position: absolute;
+    right: 111.24px;
+    left: 59.763671875px;
+    bottom: 70.25px;
+    top: 722.75146484375px;
+}
+
+.jane-doe-span {
+}
+
+.jane-doe-span2 {
+    color: var(--white, #ffffff);
+}
+
+.logout {
+    color: #ffffff;
+    text-align: center;
+    font-family: "Nunito-Medium", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+    bottom: 21.64px;
+    top: 771.359375px;
+    width: 194px;
+}
+
+.logout-span {
+}
+
+.logout-span2 {
+    color: var(--white, #ffffff);
+}
+
+.list {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 24px;
+    top: 35px;
+    overflow: visible;
+    aspect-ratio: 1;
+}

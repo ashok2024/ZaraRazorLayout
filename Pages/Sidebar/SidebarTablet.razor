@@ -1,0 +1,162 @@
+﻿@using Microsoft.JSInterop
+<!-- Components/Sidebar.razor -->
+@inject IJSRuntime JSRuntime
+@code {
+    private async Task ToggleSubmenuAsync(string elementId)
+    {
+        await JSRuntime.InvokeVoidAsync("toggleSubmenu", await JSRuntime.InvokeAsync<IJSObjectReference>("document.getElementById", elementId));
+    }
+}
+<aside class="sidebar">
+    <div class="navigation">
+        <div class="rectangle-156020-close"></div>
+        <div class="rectangle-156021-close"></div>
+        <img class="icon-akar-home-alt-1" src="/Images/Sidebar/homeSmall.png" onclick="toggleSidebar('open')" />
+        <img class="path-815-close" src="/Images/Sidebar/zaralogoSmall.png" />
+        <div class="rectangle-156023"></div>
+        <img class="icon-fa-regular-user" src="/Images/Sidebar/userIconSmall.png" />
+    </div>
+
+    @* <div class="state-closed-size-desktop">
+        <div class="rectangle-156020-close"></div>
+        <div class="rectangle-156021"></div>
+        <img class="icon-akar-home-alt-1" src="/Images/Sidebar/homeSmall.png" onclick="toggleSidebar('open')" />
+        <img class="path-815-close" src="/Images/Sidebar/zaralogoSmall.png" />
+        <div class="rectangle-156023"></div>
+        <img class="icon-fa-regular-user" src="/Images/Sidebar/userIconSmall.png" />
+    </div> *@
+
+    <div class="state-open-size-desktop">
+        <div class="rectangle-156020"></div>
+        <img class="path-815" src="/Images/Sidebar/path815.png" onclick="toggleSidebar('close')" />
+        <div class="frame-18">
+            <div class="option3">
+                <div class="frame-6">
+                    <img class="dashboard" src="/Images/Sidebar/dashboard.png" />
+                    <div class="dashboard2">Dashboard</div>
+                </div>
+            </div>
+            <div class="state-open-size-small" onclick="toggleSubmenu(this)">
+                <div class="option3">
+                    <div class="frame-6">
+                        <img class="paper-plane-tilt" src="/Images/Sidebar/PaperPlen.png" />
+                        <div class="dashboard">Campaign</div>
+                    </div>
+                    <img class="caret-up" src="/Images/Sidebar/CreateDown.png" />
+                </div>
+                <div class="internal-options">
+                    <div class="frame-20">
+                        <div class="frame-10">
+                            <div class="ellipse-45"></div>
+                            <div class="dashboard2">My Campaigns</div>
+                        </div>
+                        <div class="frame-11">
+                            <div class="ellipse-46"></div>
+                            <div class="dashboard2">Import Campaigns</div>
+                        </div>
+                        <div class="frame-12">
+                            <div class="ellipse-47"></div>
+                            <div class="dashboard2">Campaign Packs</div>
+                        </div>
+                        <div class="frame-13">
+                            <div class="ellipse-48"></div>
+                            <div class="dashboard2">Campaign Manager</div>
+                        </div>
+                        <div class="frame-14">
+                            <div class="ellipse-49"></div>
+                            <div class="dashboard2">Create Campaign</div>
+                        </div>
+                        <div class="frame-15">
+                            <div class="ellipse-50"></div>
+                            <div class="dashboard2">My Activations</div>
+                        </div>
+                        <div class="frame-16">
+                            <div class="ellipse-51"></div>
+                            <div class="dashboard2">Production Views</div>
+                        </div>
+                        <div class="frame-17">
+                            <div class="ellipse-52"></div>
+                            <div class="dashboard2">Artwork Approval</div>
+                        </div>
+                    </div>
+                    <div class="rectangle-156109"></div>
+                    <div class="rectangle-156110"></div>
+                </div>
+            </div>
+
+            <div class="option3">
+                <div class="frame-6">
+                    <img class="folder-simple" src="/Images/Sidebar/FolderSide.png" />
+                    <div class="dashboard2">Asset Library</div>
+                </div>
+            </div>
+            <div class="option3">
+                <div class="frame-6">
+                    <img class="circles-three" src="/Images/Sidebar/Circle3.png" />
+                    <div class="dashboard2">Supplier Hub</div>
+                </div>
+            </div>
+            <div class="option-with-list">
+                <div class="option3">
+                    <div class="frame-6">
+                        <img class="shopping-cart-simple" src="/Images/Sidebar/ShopingCart.png" />
+                        <div class="dashboard2">Orders</div>
+                    </div>
+                    <img class="caret-down2" src="/Images/Sidebar/CreateDown.png" />
+                </div>
+            </div>
+            <div class="option3">
+                <div class="frame-6">
+                    <img class="file" src="/Images/Sidebar/File.png" />
+                    <div class="dashboard2">Supplier Hub</div>
+                </div>
+            </div>
+            <div class="option-with-list">
+                <div class="option3">
+                    <div class="frame-6">
+                        <img class="pen" src="/Images/Sidebar/Pen.png" />
+                        <div class="dashboard2">Forum</div>
+                    </div>
+                    <img class="caret-down3" src="/Images/Sidebar/CreateDown.png" />
+                </div>
+            </div>
+            <div class="option-with-list">
+                <div class="option3">
+                    <div class="frame-6">
+                        <img class="shopping-cart-simple2" src="/Images/Sidebar/ShopingCart.png" />
+                        <div class="dashboard2">Store Hub</div>
+                    </div>
+                    <img class="caret-down4" src="/Images/Sidebar/CreateDown.png" />
+                </div>
+            </div>
+            <div class="option-with-list">
+                <div class="option3">
+                    <div class="frame-6">
+                        <img class="chart-pie-slice" src="/Images/Sidebar/Reports.png" />
+                        <div class="dashboard2">Reports</div>
+                    </div>
+                    <img class="caret-down5" src="/Images/Sidebar/CreateDown.png" />
+                </div>
+            </div>
+            <div class="option4">
+                <div class="frame-6">
+                    <img class="gear-six" src="/Images/Sidebar/Settings.png" />
+                    <div class="dashboard2">Admin</div>
+                </div>
+                <img class="caret-down6" src="/Images/Sidebar/CreateDown.png" />
+            </div>
+        </div>
+        <div class="rectangle-156023-user"></div>
+        <img class="group-175460-user" src="/Images/Sidebar/userIcon.png" />
+        <div class="jane-doe">
+            <span>
+                <span class="jane-doe-span2">Jane doe</span>
+            </span>
+        </div>
+        <div class="logout">
+            <span>
+                <span class="logout-span2">Logout</span>
+            </span>
+        </div>
+    </div>
+</aside>

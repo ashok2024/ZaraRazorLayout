@@ -1,0 +1,50 @@
+﻿
+<div class="rectangle-156027">
+    @if (string.IsNullOrEmpty(RefrenceNo) && string.IsNullOrEmpty(CampignNo))
+    {
+        <div class="campaign-manager">@Title</div>
+    }
+    else
+    {
+        <div class="campaign-manager">@Title
+            <img  class="icon-material-round-keyboard-arrow-right"  src="/images/icons/icon-material-round-keyboard-arrow-right0.png"/>            
+            <div class="clearance-event-campaign-ref-campaign-no-1806">
+                Clearance Event ,Campaign Ref:  @RefrenceNo  ,Campaign No: @CampignNo
+            </div>
+        </div>
+        
+
+
+    }  
+
+    <div class="group-175398">
+        <div class="group-175395">
+            <div class="rectangle-156024"></div>
+            <img class="group-175337" src="/images/icons/Group-175395.png" />
+        </div>
+        <div class="group-175396">
+            <div class="rectangle-1560242"></div>
+            <img class="group-175339" src="/images/icons/Group-175396.png" />
+        </div>
+        <div class="group-175397">
+            <div class="rectangle-1560243"></div>
+            <img class="group-175336" src="/images/icons/Group-175397.png" />
+        </div>
+        <div class="rectangle-156028"></div>
+        <img class="group-175338" src="/images/icons/Group-175338.png" />
+        <div class="rectangle-156029"></div>
+        <div class="group-175340">
+            <div class="rectangle-155995"></div>
+            <img class="icon-akar-newspaper" src="/images/icons/Group-175340.png" />
+        </div>
+    </div>
+
+</div>
+
+
+@code {
+    [Parameter] public string Title { get; set; }
+    [Parameter] public string CampaignName { get; set; }
+    [Parameter] public string RefrenceNo { get; set; }
+    [Parameter] public string CampignNo { get; set; }
+}

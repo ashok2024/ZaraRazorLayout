@@ -1,0 +1,70 @@
+﻿@using Microsoft.AspNetCore.Components.Routing
+@using ZaraBlazorStandlone.Pages.Sidebar.Shared
+@inject NavigationManager NavigationManager
+@inject IJSRuntime JSRuntime
+<aside class="sidebar-custom">
+    <div class="state-closed-size-desktop" style="display:none">
+        <div class="rectangle-156020-close"></div>
+        <div class="rectangle-156021"></div>
+        <img class="icon-akar-home-alt-1" src="/Images/Sidebar/homeSmall.png" @onclick='() => ToggleSidebar("open")' />
+        <img class="path-815-close" src="/Images/Sidebar/zaralogoSmall.png" />
+        <div class="rectangle-156023"></div>
+        <img class="icon-fa-regular-user" src="/Images/Sidebar/userIconSmall.png" />
+    </div>
+
+    <div class="state-open-size-desktop" style="display:block">
+        <div class="rectangle-156020"></div>
+        <img class="path-815" src="/Images/Sidebar/path815.png" @onclick='() => ToggleSidebar("close")' />
+        <div class="frame-18">
+            <SidebarLink Href="/dashboard" Icon="/Images/Sidebar/dashboard.png" Label="Dashboard" />
+            <SidebarSubmenu Title="Campaign" IconSrc="/Images/Sidebar/PaperPlen.png" Items="@campaignItems" />           
+            <SidebarLink Href="/AssetLibrary" Icon="/Images/Sidebar/FolderSide.png" Label="Asset Library" />
+            <SidebarLink Href="/SupplierHub" Icon="/Images/Sidebar/Circle3.png" Label="Supplier Hub" />
+            <SidebarSubmenu Title="Orders" IconSrc="/Images/Sidebar/ShopingCart.png" Items="@campaignItems" />
+            <SidebarSubmenu Title="Forum" IconSrc="/Images/Sidebar/Pen.png" Items="@campaignItems" />
+            <SidebarSubmenu Title="Store Hub" IconSrc="/Images/Sidebar/ShopingCart.png" Items="@campaignItems" />
+            <SidebarSubmenu Title="Reports" IconSrc="/Images/Sidebar/Reports.png" Items="@campaignItems" />
+            <SidebarLink Href="/Admin" Icon="/Images/Sidebar/Settings.png" Label="Admin" />
+        </div>
+
+        <div class="rectangle-156023-user"></div>
+        <img class="group-175460-user" src="/Images/Sidebar/userIcon.png" />
+        <div class="jane-doe">
+            <span><span class="jane-doe-span2">Jane Doe</span></span>
+        </div>
+        <div class="logout" @onclick="Logout">
+            <span><span class="logout-span2">Logout</span></span>
+        </div>
+    </div>
+</aside>
+
+@code {
+    private bool isCampaignSubmenuOpen = false;
+
+    private List<SidebarSubmenu.SidebarItem> campaignItems = new()
+    {
+        new() { Label = "My Campaigns", Link = "/campaigns/my" },
+        new() { Label = "Import Campaigns", Link = "/campaigns/import" },
+        new() { Label = "Campaign Packs", Link = "/campaigns/packs" },
+        new() { Label = "Campaign Manager", Link = "/campaign-manager" },
+        new() { Label = "Create Campaign", Link = "/campaigns/create" },
+        new() { Label = "My Activations", Link = "/campaigns/activations" },
+        new() { Label = "Production Views", Link = "/campaigns/production" },
+        new() { Label = "Artwork Approval", Link = "/campaigns/artwork" }
+    };
+
+    private async void ToggleSidebar(string state)
+    {
+        await JSRuntime.InvokeVoidAsync("toggleSidebar", state);
+    }
+
+    private void ToggleCampaignSubmenu()
+    {
+        isCampaignSubmenuOpen = !isCampaignSubmenuOpen;
+    }
+
+    private void Logout()
+    {
+        NavigationManager.NavigateTo("/logout");
+    }    
+}

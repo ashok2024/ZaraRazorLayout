@@ -1,0 +1,44 @@
+﻿@inject IJSRuntime JS
+
+<div>
+    @if (windowWidth >= 1024)
+    {
+       
+        <SidebarDesktop />
+
+    }
+    else if (windowWidth >= 768)
+    {
+        <SidebarTablet />
+    }
+    else
+    {
+         <SidebarMobile />
+    }
+</div>
+
+@code {
+    private int windowWidth;
+    private DotNetObjectReference<SidebarDashboard>? dotNetRef;
+    [Parameter]
+    public EventCallback ToggleSidebar { get; set; }
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            windowWidth = await JS.InvokeAsync<int>("getScreenType");
+            StateHasChanged(); // re-render with updated screenType
+        }
+    }
+    [JSInvokable]
+    public void OnResize(int newWidth)
+    {
+        windowWidth = newWidth;
+        StateHasChanged();
+    }
+
+    public void Dispose()
+    {
+        dotNetRef?.Dispose();
+    }
+}

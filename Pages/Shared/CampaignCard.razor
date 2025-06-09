@@ -1,0 +1,27 @@
+﻿@using ZaraBlazorStandlone.Models
+<div class="campaign-card">
+    <div class="left">
+        <a href="#" class="event-link">@Item.Title</a>
+        <div>Create by: @Item.CreatedBy</div>
+        <div>Campaign No: @Item.Number</div>
+        <div>Campaign Ref: @Item.CampaignReference</div>
+    </div>
+    <div class="center">
+        <div>Delivery Date: @Item.DeliveryDate.ToString("dd/MM/yyyy")</div>
+        <div>Price: <span class="price">£@Item.Price</span></div>
+        <div>No Of Items: <a href="#">@Item.NoOfItems</a></div>
+        <div>Delivery Points: @Item.DeliveryPoints</div>
+    </div>
+    <div class="right">
+        <div>Delivery: <span class="blue">100%</span></div>
+        <div>Last Tracked: @Item.LastTracked.ToString("dd/MM/yyyy")</div>
+        <div class="status-bar">
+            <!-- Add colored progress indicators here -->
+        </div>
+        <div>Status: @Item.Status</div>
+    </div>
+</div>
+
+@code {
+    [Parameter] public CampaignItem Item { get; set; }
+}

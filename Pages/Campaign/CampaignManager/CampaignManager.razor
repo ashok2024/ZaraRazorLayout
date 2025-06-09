@@ -1,0 +1,509 @@
+﻿@page "/campaign-manager"
+@using ZaraBlazorStandlone.Models
+@using ZaraBlazorStandlone.Pages.Shared
+
+<PageHeader Title="Campaign Manager" CampignNo="@selectedCampaignNo" RefrenceNo="@selectedReferenceNo" />
+
+
+@if (isLoading)
+{
+    <Loader />
+}
+else
+{
+    if (!showCampaignDetails)
+    {
+        <div id="CampaignList">
+            <SearchFilters Users="@Users.Select(u => u.Name).ToList()"
+                           Managers="@Managers.Select(m => m.Name).ToList()"
+                           CampaignName="@search.CampaignName"
+                           CreatedBy="@search.CreatedBy"
+                           DateFrom="@search.DateFrom"
+                           DateTo="@search.DateTo"
+                           CampaignRef="@search.CampaignRef"
+                           ProjectManager="@search.ProjectManager"
+                           OnSearchClicked="@LoadCampaigns" />
+            <CampaignList Campaigns="@PagedCampaigns" OnSearchTextChangedFromChild="HandleSearchTextChanged" OnPageSizeChanged="HandlePageSizeChanged" OnCampaignSelected="OnCampaignSelected" />
+        </div>
+    }
+    else
+    {
+        <div id="divCampignManagerDetails" class="card mt-3">
+            <div class="card-body">
+                <CampaignManagerDetailsMaster OnCancelClicked="HandleCancel" />
+            </div>
+        </div>
+    }
+}
+
+
+
+@code {
+    private string SearchText;
+    private bool isLoading = false;
+    private SearchModel search = new();
+    private List<UserModel> Users = new();
+    private List<ManagerModel> Managers = new();
+    private List<CampaignItem> AllCampaigns = new(); // all data
+    private List<CampaignItem> PagedCampaigns = new();
+
+    private int CurrentPage = 1;
+    private int TotalPages = 1;
+    private int PageSize = 10;
+    private void HandlePageSizeChanged(int newPageSize)
+    {
+
+        if (newPageSize == -1)
+        {
+            PageSize = AllCampaigns.Count; // Show all records
+        }
+        else
+        {
+            PageSize = newPageSize;
+        }
+        CurrentPage = 1;
+        LoadCampaigns();
+    }
+    private string selectedCampaignNo;
+    private string selectedReferenceNo;
+
+    private void OnCampaignSelected((string CampaignNo, string ReferenceNo) campaignInfo)
+    {
+        selectedCampaignNo = campaignInfo.CampaignNo;
+        selectedReferenceNo = campaignInfo.ReferenceNo;
+
+        // Optionally show the campaign details section
+        showCampaignDetails = true;
+    }
+    private void HandleCancel()    
+    {
+        selectedCampaignNo = "";
+        selectedReferenceNo = "";
+        showCampaignDetails = false;
+    }
+    private bool showCampaignDetails = false;
+    private void HandleSearchTextChanged(string newText)
+    {
+
+        ApplyGlobalSearch(newText);
+    }
+    protected override void OnInitialized()
+    {
+        // Example mock data
+        Users = new List<UserModel> {
+            new UserModel { Name = "Jane Doe" },
+            new UserModel { Name = "John Smith" }
+        };
+
+        Managers = new List<ManagerModel> {
+            new ManagerModel { Name = "Manager A" },
+            new ManagerModel { Name = "Manager B" }
+        };
+        AllCampaigns.AddRange(new List<CampaignItem>
+{
+    new CampaignItem
+        {
+            DeliveryDate = new DateTime(2025, 2, 1),
+            Price = 459.08M,
+            NoOfItems = 3345,
+            DeliveryPoints = 1920,
+            IsClearanceEvent = true,
+            CreatedBy = "Jane Doe",
+            CampaignNumber = "1080",
+            CampaignReference = "9865362",
+            DeliveryPercentage = 100,
+            LastTrackedDate = new DateTime(2024, 9, 6),
+            Status = "Delivered",
+            TrackingStatus = "No tracking"
+        },
+        new CampaignItem
+        {
+            DeliveryDate = new DateTime(2025, 1, 1),
+            Price = 459.08M,
+            NoOfItems = 3345,
+            DeliveryPoints = 1920,
+            IsClearanceEvent = true,
+            CreatedBy = "Ashok Mehta",
+            CampaignNumber = "1080",
+            CampaignReference = "9865362",
+            DeliveryPercentage = 100,
+            LastTrackedDate = new DateTime(2024, 1, 6),
+            Status = "Delivered",
+            TrackingStatus = "No tracking"
+        },
+        new CampaignItem
+        {
+            DeliveryDate = new DateTime(2025, 3, 1),
+            Price = 459.08M,
+            NoOfItems = 3345,
+            DeliveryPoints = 1920,
+            IsClearanceEvent = true,
+            CreatedBy = "Jane Smith",
+            CampaignNumber = "1080",
+            CampaignReference = "9865362",
+            DeliveryPercentage = 100,
+            LastTrackedDate = new DateTime(2024, 4, 6),
+            Status = "Delivered",
+            TrackingStatus = "No tracking"
+        },
+        new CampaignItem
+        {
+            DeliveryDate = new DateTime(2025, 3, 1),
+            Price = 459.08M,
+            NoOfItems = 3345,
+            DeliveryPoints = 1920,
+            IsClearanceEvent = true,
+            CreatedBy = "Jane Doe",
+            CampaignNumber = "1080",
+            CampaignReference = "9865362",
+            DeliveryPercentage = 100,
+            LastTrackedDate = new DateTime(2024, 9, 6),
+            Status = "Delivered",
+            TrackingStatus = "No tracking"
+        },
+        new CampaignItem
+        {
+            DeliveryDate = new DateTime(2025, 3, 1),
+            Price = 459.08M,
+            NoOfItems = 3345,
+            DeliveryPoints = 1920,
+            IsClearanceEvent = true,
+            CreatedBy = "Jane Doe",
+            CampaignNumber = "1080",
+            CampaignReference = "9865362",
+            DeliveryPercentage = 100,
+            LastTrackedDate = new DateTime(2024, 9, 6),
+            Status = "Delivered",
+            TrackingStatus = "No tracking"
+        },
+        new CampaignItem
+        {
+            DeliveryDate = new DateTime(2025, 3, 1),
+            Price = 459.08M,
+            NoOfItems = 3345,
+            DeliveryPoints = 1920,
+            IsClearanceEvent = true,
+            CreatedBy = "Jane Doe",
+            CampaignNumber = "1080",
+            CampaignReference = "9865362",
+            DeliveryPercentage = 100,
+            LastTrackedDate = new DateTime(2024, 9, 6),
+            Status = "Delivered",
+            TrackingStatus = "No tracking"
+        },
+        new CampaignItem
+        {
+            DeliveryDate = new DateTime(2025, 3, 1),
+            Price = 459.08M,
+            NoOfItems = 3345,
+            DeliveryPoints = 1920,
+            IsClearanceEvent = true,
+            CreatedBy = "Jane Doe",
+            CampaignNumber = "1080",
+            CampaignReference = "9865362",
+            DeliveryPercentage = 100,
+            LastTrackedDate = new DateTime(2024, 9, 6),
+            Status = "Delivered",
+            TrackingStatus = "No tracking"
+        },
+        new CampaignItem
+        {
+            DeliveryDate = new DateTime(2025, 3, 1),
+            Price = 459.08M,
+            NoOfItems = 3345,
+            DeliveryPoints = 1920,
+            IsClearanceEvent = true,
+            CreatedBy = "Jane Doe",
+            CampaignNumber = "1080",
+            CampaignReference = "9865362",
+            DeliveryPercentage = 100,
+            LastTrackedDate = new DateTime(2024, 9, 6),
+            Status = "Delivered",
+            TrackingStatus = "No tracking"
+        },
+        new CampaignItem
+        {
+            DeliveryDate = new DateTime(2025, 3, 1),
+            Price = 459.08M,
+            NoOfItems = 3345,
+            DeliveryPoints = 1920,
+            IsClearanceEvent = true,
+            CreatedBy = "Jane Doe",
+            CampaignNumber = "1080",
+            CampaignReference = "9865362",
+            DeliveryPercentage = 100,
+            LastTrackedDate = new DateTime(2024, 9, 6),
+            Status = "Delivered",
+            TrackingStatus = "No tracking"
+        },
+        new CampaignItem
+        {
+            DeliveryDate = new DateTime(2025, 3, 1),
+            Price = 459.08M,
+            NoOfItems = 3345,
+            DeliveryPoints = 1920,
+            IsClearanceEvent = true,
+            CreatedBy = "Jane Doe",
+            CampaignNumber = "1080",
+            CampaignReference = "9865362",
+            DeliveryPercentage = 100,
+            LastTrackedDate = new DateTime(2024, 9, 6),
+            Status = "Delivered",
+            TrackingStatus = "No tracking"
+        },
+        new CampaignItem
+        {
+            DeliveryDate = new DateTime(2025, 2, 1),
+            Price = 459.08M,
+            NoOfItems = 3345,
+            DeliveryPoints = 1920,
+            IsClearanceEvent = true,
+            CreatedBy = "Jane Doe",
+            CampaignNumber = "1080",
+            CampaignReference = "9865362",
+            DeliveryPercentage = 100,
+            LastTrackedDate = new DateTime(2024, 9, 6),
+            Status = "Delivered",
+            TrackingStatus = "No tracking"
+        },
+        new CampaignItem
+        {
+            DeliveryDate = new DateTime(2025, 1, 1),
+            Price = 459.08M,
+            NoOfItems = 3345,
+            DeliveryPoints = 1920,
+            IsClearanceEvent = true,
+            CreatedBy = "Ashok Mehta",
+            CampaignNumber = "1080",
+            CampaignReference = "9865362",
+            DeliveryPercentage = 100,
+            LastTrackedDate = new DateTime(2024, 1, 6),
+            Status = "Delivered",
+            TrackingStatus = "No tracking"
+        },
+        new CampaignItem
+        {
+            DeliveryDate = new DateTime(2025, 3, 1),
+            Price = 459.08M,
+            NoOfItems = 3345,
+            DeliveryPoints = 1920,
+            IsClearanceEvent = true,
+            CreatedBy = "Jane Smith",
+            CampaignNumber = "1080",
+            CampaignReference = "9865362",
+            DeliveryPercentage = 100,
+            LastTrackedDate = new DateTime(2024, 4, 6),
+            Status = "Delivered",
+            TrackingStatus = "No tracking"
+        },
+        new CampaignItem
+        {
+            DeliveryDate = new DateTime(2025, 3, 1),
+            Price = 459.08M,
+            NoOfItems = 3345,
+            DeliveryPoints = 1920,
+            IsClearanceEvent = true,
+            CreatedBy = "Jane Doe",
+            CampaignNumber = "1080",
+            CampaignReference = "9865362",
+            DeliveryPercentage = 100,
+            LastTrackedDate = new DateTime(2024, 9, 6),
+            Status = "Delivered",
+            TrackingStatus = "No tracking"
+        },
+        new CampaignItem
+        {
+            DeliveryDate = new DateTime(2025, 3, 1),
+            Price = 459.08M,
+            NoOfItems = 3345,
+            DeliveryPoints = 1920,
+            IsClearanceEvent = true,
+            CreatedBy = "Jane Doe",
+            CampaignNumber = "1080",
+            CampaignReference = "9865362",
+            DeliveryPercentage = 100,
+            LastTrackedDate = new DateTime(2024, 9, 6),
+            Status = "Delivered",
+            TrackingStatus = "No tracking"
+        },
+        new CampaignItem
+        {
+            DeliveryDate = new DateTime(2025, 3, 1),
+            Price = 459.08M,
+            NoOfItems = 3345,
+            DeliveryPoints = 1920,
+            IsClearanceEvent = true,
+            CreatedBy = "Jane Doe",
+            CampaignNumber = "1080",
+            CampaignReference = "9865362",
+            DeliveryPercentage = 100,
+            LastTrackedDate = new DateTime(2024, 9, 6),
+            Status = "Delivered",
+            TrackingStatus = "No tracking"
+        },
+        new CampaignItem
+        {
+            DeliveryDate = new DateTime(2025, 3, 1),
+            Price = 459.08M,
+            NoOfItems = 3345,
+            DeliveryPoints = 1920,
+            IsClearanceEvent = true,
+            CreatedBy = "Jane Doe",
+            CampaignNumber = "1080",
+            CampaignReference = "9865362",
+            DeliveryPercentage = 100,
+            LastTrackedDate = new DateTime(2024, 9, 6),
+            Status = "Delivered",
+            TrackingStatus = "No tracking"
+        },
+        new CampaignItem
+        {
+            DeliveryDate = new DateTime(2025, 3, 1),
+            Price = 459.08M,
+            NoOfItems = 3345,
+            DeliveryPoints = 1920,
+            IsClearanceEvent = true,
+            CreatedBy = "Jane Doe",
+            CampaignNumber = "1080",
+            CampaignReference = "9865362",
+            DeliveryPercentage = 100,
+            LastTrackedDate = new DateTime(2024, 9, 6),
+            Status = "Delivered",
+            TrackingStatus = "No tracking"
+        },
+        new CampaignItem
+        {
+            DeliveryDate = new DateTime(2025, 3, 1),
+            Price = 459.08M,
+            NoOfItems = 3345,
+            DeliveryPoints = 1920,
+            IsClearanceEvent = true,
+            CreatedBy = "Jane Doe",
+            CampaignNumber = "1080",
+            CampaignReference = "9865362",
+            DeliveryPercentage = 100,
+            LastTrackedDate = new DateTime(2024, 9, 6),
+            Status = "Delivered",
+            TrackingStatus = "No tracking"
+        },
+        new CampaignItem
+        {
+            DeliveryDate = new DateTime(2025, 3, 1),
+            Price = 459.08M,
+            NoOfItems = 3345,
+            DeliveryPoints = 1920,
+            IsClearanceEvent = true,
+            CreatedBy = "Jane Doe",
+            CampaignNumber = "1080",
+            CampaignReference = "9865362",
+            DeliveryPercentage = 100,
+            LastTrackedDate = new DateTime(2024, 9, 6),
+            Status = "Delivered",
+            TrackingStatus = "No tracking"
+        }
+
+});
+
+
+        LoadCampaigns();
+    }
+
+    private void LoadCampaigns()
+    {
+        isLoading = true;
+        try
+        {
+            IEnumerable<CampaignItem> filtered = AllCampaigns;
+
+            if (!string.IsNullOrWhiteSpace(search.CampaignName))
+                filtered = filtered.Where(c => c.Title.Contains(search.CampaignName, StringComparison.OrdinalIgnoreCase));
+
+            if (!string.IsNullOrWhiteSpace(search.CreatedBy))
+                filtered = filtered.Where(c => c.CreatedBy == search.CreatedBy);
+
+            if (search.DateFrom.HasValue)
+                filtered = filtered.Where(c => c.DeliveryDate >= search.DateFrom.Value);
+
+            if (search.DateTo.HasValue)
+                filtered = filtered.Where(c => c.DeliveryDate <= search.DateTo.Value);
+
+            if (!string.IsNullOrWhiteSpace(search.CampaignRef))
+                filtered = filtered.Where(c => c.CampaignReference.Contains(search.CampaignRef, StringComparison.OrdinalIgnoreCase));
+
+            // If ProjectManager is used in filtering, add it here
+
+            // Pagination
+            int totalItems = filtered.Count();
+            TotalPages = (int)Math.Ceiling(totalItems / (double)PageSize);
+            PagedCampaigns = filtered
+                .Skip((CurrentPage - 1) * PageSize)
+                .Take(PageSize)
+                .ToList();
+        }
+        catch (Exception ex)
+        {
+
+            throw;
+        }
+        finally        
+        {
+            isLoading = false;
+        }
+        
+        
+    }
+    private void ApplyGlobalSearch(string text)
+    {
+        string keyword = text?.Trim();
+
+        IEnumerable<CampaignItem> filtered = AllCampaigns;
+
+        if (!string.IsNullOrWhiteSpace(keyword))
+        {
+            filtered = filtered.Where(c =>
+                (!string.IsNullOrWhiteSpace(c.Title) && c.Title.Contains(keyword, StringComparison.OrdinalIgnoreCase)) ||
+                (!string.IsNullOrWhiteSpace(c.CreatedBy) && c.CreatedBy.Contains(keyword, StringComparison.OrdinalIgnoreCase)) ||
+                (!string.IsNullOrWhiteSpace(c.CampaignReference) && c.CampaignReference.Contains(keyword, StringComparison.OrdinalIgnoreCase)) ||
+                (c.DeliveryDate.ToString("yyyy-MM-dd").Contains(keyword)) // match formatted date
+                                                                          // Add more fields if needed
+            );
+        }
+
+        // Reset pagination
+        CurrentPage = 1;
+
+        // Apply pagination
+        int totalItems = filtered.Count();
+        TotalPages = (int)Math.Ceiling(totalItems / (double)PageSize);
+        PagedCampaigns = filtered
+            .Skip((CurrentPage - 1) * PageSize)
+            .Take(PageSize)
+            .ToList();
+    }
+    private void ChangePage(int newPage)
+    {
+        CurrentPage = newPage;
+        LoadCampaigns();
+    }
+
+    // Models
+    public class SearchModel
+    {
+        public string CampaignName { get; set; }
+        public string CreatedBy { get; set; }
+        public DateTime? DateFrom { get; set; }
+        public DateTime? DateTo { get; set; }
+        public string CampaignRef { get; set; }
+        public string ProjectManager { get; set; }
+    }
+
+    public class UserModel
+    {
+        public string Name { get; set; }
+    }
+
+    public class ManagerModel
+    {
+        public string Name { get; set; }
+    }
+}

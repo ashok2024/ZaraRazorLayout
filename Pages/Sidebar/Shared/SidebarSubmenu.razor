@@ -1,0 +1,54 @@
+﻿@inject IJSRuntime JSRuntime
+<div @ref="submenuRef" class="state-open-size-small" @onclick="HandleToggleClick">
+    <div class="option3">
+        <div class="frame-6">
+            <img class="paper-plane-tilt" src="@IconSrc" />
+            <div class="dashboard">@Title</div>
+        </div>
+        <img class="caret-up" src="/Images/Sidebar/CreateDown.png" />
+    </div>
+
+    <div class="internal-options">
+        <div class="frame-20">
+            @if (Items != null && Items.Any())
+            {
+                @for (int i = 0; i < Items.Count; i++)
+                {
+                    var item = Items[i];
+                    var ellipseClass = $"ellipse-{45 + i}";
+                    var frameClass = $"frame-{10 + i}";
+                    <div class="@frameClass">
+                        <div class="@ellipseClass"></div>
+                        <NavLink href="@item.Link"  style="text-decoration:none !important">                          
+                            <div class="dashboard2">@item.Label</div>
+                        </NavLink>
+                    </div>
+                    
+                }
+            }
+        </div>
+        <div class="rectangle-156109"></div>
+        <div class="rectangle-156110"></div>
+
+    </div>
+</div>
+
+@code {
+    [Parameter] public string Title { get; set; }
+    [Parameter] public string IconSrc { get; set; }
+    [Parameter] public List<SidebarItem> Items { get; set; }
+    private bool IsOpen = false;
+
+    private void ToggleSubmenu() => IsOpen = !IsOpen;
+    private ElementReference submenuRef;
+
+    private async Task HandleToggleClick()
+    {
+        await JSRuntime.InvokeVoidAsync("toggleSubmenu", submenuRef);
+    }
+    public class SidebarItem
+    {
+        public string Label { get; set; }
+        public string Link { get; set; }
+    }
+}

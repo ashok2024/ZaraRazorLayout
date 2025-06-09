@@ -1,0 +1,264 @@
+﻿<div class="my-scrollable-div" style="height:400px ; overflow:auto; margin-top: 10px;">
+    <div class="group-229081">
+        <table class="table table-bordered align-middle text-center campaign-table mt-3">
+            <thead class="bg-info bg-opacity-10">
+                <tr>
+                    <th class="border-0 tr-custome-bg-color element-code">Campaign</th>
+                    <th class="border-0 tr-custome-bg-color element-code">Element code</th>
+                    <th class="border-0 tr-custome-bg-color element-code">Element description</th>
+                    <th class="border-0 tr-custome-bg-color element-code">Element type</th>
+                    <th class="border-0 tr-custome-bg-color element-code">Sites</th>
+                    <th class="border-0 tr-custome-bg-color element-code">Allocated qty</th>
+                    <th class="border-0 tr-custome-bg-color element-code">Overs%</th>
+                    <th class="border-0 tr-custome-bg-color element-code">Overs qty</th>
+                    <th class="border-0 tr-custome-bg-color element-code">Total qty</th>
+                    <th class="border-0 tr-custome-bg-color element-code">Price</th>
+                    <th class="border-0 tr-custome-bg-color element-code">CO2e</th>
+                    <th class="border-0 tr-custome-bg-color element-code"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in campaignItems)
+                {
+                    item.SubItems = new List<SubItem>
+                                {
+                                new SubItem { Number = 101, Name = "London store", ContactName = "Jane doe", ContactNumber = "+61-098765432", City = "London", Country = "United Kingdom", Qty = 10 },
+                                new SubItem { Number = 102, Name = "Paris store", ContactName = "John Smith", ContactNumber = "+33-123456789", City = "Paris", Country = "France", Qty = 8 }
+                                // Add more if needed
+                                };
+                    <tr class="custom-row-style">
+                        <td class="td-custome-b-none tr-text-custome">@item.Campaign</td>
+                        <td class="td-custome-b-none tr-text-custome">@item.ElementCode</td>
+                        <td class="td-custome-b-none tr-text-custome">@item.ElementDescription</td>
+                        <td class="td-custome-b-none tr-text-custome">@item.ElementType</td>
+                        <td class="td-custome-b-none tr-text-custome">@item.Sites</td>
+                        <td class="td-custome-b-none tr-text-custome">@item.AllocatedQty</td>
+                        <td class="td-custome-b-none tr-text-custome">
+                            <input type="text" name="OversPercent" value="@item.OversPercent" class="form-control" style="width: 60px;" />
+                        </td>
+
+                        <!-- OversQty as input -->
+                        <td class="td-custome-b-none tr-text-custome">
+                            <input type="text" name="OversQty" value="@item.OversQty" class="form-control" style="width: 60px;" />
+                        </td>
+                        <td class="td-custome-b-none tr-text-custome">@item.TotalQty</td>
+                        <td class="td-custome-b-none tr-text-custome">£ @item.Price</td>
+                        <td class="td-custome-b-none tr-text-custome">@item.CO2e</td>
+                        <td class="td-custome-b-none">
+                            <div class="ellipse-14-custome-button">
+                                <button class="icon-button" type="button" @onclick="() => ToggleSublist(item)">
+                                    <img class=""
+                                         src="/images/icons/icon material-round-arrow-drop-down.png" />
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    @if (item.IsExpanded)
+                    {
+                        <tr>
+                            <td colspan="11" style="border:none !important">
+                                <table class="table table-sm table-bordered sub-table" style="border: 1px solid lightgray;border-radius: 5px;">
+                                    <thead>
+                                        <tr>
+                                            <th class="b-bottom-sub-td-table tr-custome-bg-color-subtable element-code-sub-table">Number</th>
+                                            <th class="b-bottom-sub-td-table tr-custome-bg-color-subtable element-code-sub-table">Name</th>
+                                            <th class="b-bottom-sub-td-table tr-custome-bg-color-subtable element-code-sub-table">Contact Name</th>
+                                            <th class="b-bottom-sub-td-table tr-custome-bg-color-subtable element-code-sub-table">Contact Number</th>
+                                            <th class="b-bottom-sub-td-table tr-custome-bg-color-subtable element-code-sub-table">City</th>
+                                            <th class="b-bottom-sub-td-table tr-custome-bg-color-subtable element-code-sub-table">Country</th>
+                                            <th class="b-bottom-sub-td-table tr-custome-bg-color-subtable element-code-sub-table">Qty</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var sub in item.SubItems)
+                                        {
+                                            <tr>
+                                                <td class="td-custome-b-none tr-text-custome-subtable">@sub.Number</td>
+                                                <td class="td-custome-b-none tr-text-custome-subtable">@sub.Name</td>
+                                                <td class="td-custome-b-none tr-text-custome-subtable">@sub.ContactName</td>
+                                                <td class="td-custome-b-none tr-text-custome-subtable">@sub.ContactNumber</td>
+                                                <td class="td-custome-b-none tr-text-custome-subtable">@sub.City</td>
+                                                <td class="td-custome-b-none tr-text-custome-subtable">@sub.Country</td>
+                                                <td class="td-custome-b-none tr-text-custome-subtable">@sub.Qty</td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+<Pagination CurrentPage="@CurrentPage"
+                    TotalPages="@TotalPages"
+            TotalItems="@campaignItems.Count"
+                    PageSize="@PageSize"
+                    OnPageChanged="ChangePage" />
+
+@code {
+    private int CurrentPage = 1;
+    private int TotalPages = 1;
+    private int PageSize = 10;
+
+    private string selectedView = "item";
+    public List<CampaignItem> campaignItems = new List<CampaignItem>();
+    public List<SubItem> subItem = new List<SubItem>();
+    private void SelectView(string view)
+    {
+        selectedView = view;
+    }
+    private void ChangePage(int newPage)
+    {
+        CurrentPage = newPage;
+        // LoadCampaigns();
+    }
+    private string GetButtonClass(string view)
+    {
+        return selectedView == view
+            ? "btn btn-primary custom-btn"
+            : "btn btn-outline-secondary custom-btn";
+    }
+    protected override void OnInitialized()
+    {
+        var subItems = new List<SubItem>
+        {
+            new SubItem { Number = 101, Name = "London store", ContactName = "Jane Doe", ContactNumber = "+61-098765432", City = "London", Country = "United Kingdom", Qty = 10 },
+            new SubItem { Number = 101, Name = "London store", ContactName = "Jane Doe", ContactNumber = "+61-098765432", City = "London", Country = "United Kingdom", Qty = 10 }
+        };
+
+        campaignItems = new List<CampaignItem>
+    {
+        new CampaignItem
+        {
+            Campaign = "Summer Sale",
+            ElementCode = "222572",
+            ElementDescription = "Clearance",
+            ElementType = "A0 Poster",
+            Sites = 10,
+            AllocatedQty = 33,
+            OversPercent = 35,
+            OversQty = 12,
+            TotalQty = 45,
+            Price = 174.65m,
+            CO2e = 1.76,
+            SubItems = subItem
+        },
+        new CampaignItem
+        {
+            Campaign = "Summer Sale",
+            ElementCode = "222572",
+            ElementDescription = "Clearance",
+            ElementType = "A0 Poster",
+            Sites = 10,
+            AllocatedQty = 33,
+            OversPercent = 35,
+            OversQty = 12,
+            TotalQty = 45,
+            Price = 174.65m,
+            CO2e = 1.76,
+            SubItems = subItem
+        }
+        ,new CampaignItem
+        {
+            Campaign = "Summer Sale",
+            ElementCode = "222572",
+            ElementDescription = "Clearance",
+            ElementType = "A0 Poster",
+            Sites = 10,
+            AllocatedQty = 33,
+            OversPercent = 35,
+            OversQty = 12,
+            TotalQty = 45,
+            Price = 174.65m,
+            CO2e = 1.76,
+            SubItems = subItem
+        },
+        new CampaignItem
+        {
+            Campaign = "Summer Sale",
+            ElementCode = "222572",
+            ElementDescription = "Clearance",
+            ElementType = "A0 Poster",
+            Sites = 10,
+            AllocatedQty = 33,
+            OversPercent = 35,
+            OversQty = 12,
+            TotalQty = 45,
+            Price = 174.65m,
+            CO2e = 1.76,
+            SubItems = subItem
+        },
+        new CampaignItem
+        {
+            Campaign = "Summer Sale",
+            ElementCode = "222572",
+            ElementDescription = "Clearance",
+            ElementType = "A0 Poster",
+            Sites = 10,
+            AllocatedQty = 33,
+            OversPercent = 35,
+            OversQty = 12,
+            TotalQty = 45,
+            Price = 174.65m,
+            CO2e = 1.76,
+            SubItems = subItem
+        },
+        new CampaignItem
+        {
+            Campaign = "Summer Sale",
+            ElementCode = "222572",
+            ElementDescription = "Clearance",
+            ElementType = "A0 Poster",
+            Sites = 10,
+            AllocatedQty = 33,
+            OversPercent = 35,
+            OversQty = 12,
+            TotalQty = 45,
+            Price = 174.65m,
+            CO2e = 1.76,
+            SubItems = subItem
+        }
+        // Add more items if needed
+    };
+
+
+    }
+    void ToggleSublist(CampaignItem item)
+    {
+        item.IsExpanded = !item.IsExpanded;
+        StateHasChanged();
+    }
+    public class CampaignItem
+    {
+        public string Campaign { get; set; }
+        public string ElementCode { get; set; }
+        public string ElementDescription { get; set; }
+        public string ElementType { get; set; }
+        public int Sites { get; set; }
+        public int AllocatedQty { get; set; }
+        public double OversPercent { get; set; }
+        public int OversQty { get; set; }
+        public int TotalQty { get; set; }
+        public decimal Price { get; set; }
+        public double CO2e { get; set; }
+
+        public bool IsExpanded { get; set; } = false; // for UI toggle
+        public List<SubItem> SubItems { get; set; } = new(); // child rows
+    }
+
+    public class SubItem
+    {
+        public int Number { get; set; }
+        public string Name { get; set; }
+        public string ContactName { get; set; }
+        public string ContactNumber { get; set; }
+        public string City { get; set; }
+        public string Country { get; set; }
+        public int Qty { get; set; }
+    }
+}

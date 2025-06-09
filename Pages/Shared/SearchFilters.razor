@@ -1,0 +1,117 @@
+﻿@* <div class="search-filters">
+    <InputText placeholder="Campaign name" @bind-Value="CampaignName" />
+    <InputSelect @bind-Value="CreatedBy">
+        <option value="">None Selected</option>
+        @foreach (var user in Users)
+        {
+            <option value="@user">@user</option>
+        }
+    </InputSelect>
+    <InputDate @bind-Value="DateFrom" />
+    <InputDate @bind-Value="DateTo" />
+    <InputText placeholder="Campaign Ref" @bind-Value="CampaignRef" />
+    <InputSelect @bind-Value="ProjectManager">
+        <option>Select Project Manager</option>
+        @foreach (var manager in Managers)
+        {
+            <option value="@manager">@manager</option>
+        }
+    </InputSelect>
+    <button class="search-button" @onclick="OnSearch">Search</button>
+</div> *@
+<div class="border p-4 rounded shadow-sm mt-2">
+    <h5 class="mb-4">Search Filters</h5>
+
+    <div class="d-flex flex-wrap align-items-center gap-3">
+        <!-- Campaign -->
+        <div class="d-flex align-items-center" style="min-width: 220px;">
+            <label class="me-2 mb-0" style="white-space: nowrap; min-width: 110px;">Campaign</label>
+            <InputText class="form-control form-control-sm" @bind-Value="CampaignName" placeholder="Campaign Name" />
+        </div>
+
+        <!-- Created By -->
+        <div class="d-flex align-items-center" style="min-width: 180px;">
+            <label class="me-2 mb-0" style="white-space: nowrap; min-width: 100px;">Created By</label>
+            <InputSelect class="form-select form-select-sm" @bind-Value="CreatedBy" style="min-width: 80px;">
+                <option value="">None Selected</option>
+                @foreach (var user in Users)
+                {
+                    <option value="@user">@user</option>
+                }
+            </InputSelect>
+        </div>
+
+        <!-- Delivery Date From -->
+        <div class="d-flex align-items-center" style="min-width: 230px;">
+            <label class="me-2 mb-0" style="white-space: nowrap; min-width: 130px;">Delivery Date From</label>
+            <InputDate class="form-control form-control-sm" @bind-Value="DateFrom" />
+        </div>
+
+        <!-- To -->
+        <div class="d-flex align-items-center" style="min-width: 150px;">
+            <label class="me-2 mb-0" style="white-space: nowrap; min-width: 30px;">To</label>
+            <InputDate class="form-control form-control-sm" @bind-Value="DateTo" />
+        </div>
+
+        <!-- Campaign Ref -->
+        <div class="d-flex align-items-center" style="min-width: 180px;">
+            <label class="me-2 mb-0" style="white-space: nowrap; min-width: 110px;">Campaign Ref</label>
+            <InputText class="form-control form-control-sm" @bind-Value="CampaignRef" placeholder="Ref Number" />
+        </div>
+
+        <!-- Project Manager -->
+        <div class="d-flex align-items-center" style="min-width: 210px;">
+            <label class="me-2 mb-0" style="white-space: nowrap; min-width: 120px;">Project Manager</label>
+            <InputSelect class="form-select form-select-sm" @bind-Value="ProjectManager" style="min-width: 80px;">
+                <option value="">Select Manager</option>
+                @foreach (var mgr in Managers)
+                {
+                    <option value="@mgr">@mgr</option>
+                }
+            </InputSelect>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center" style="min-width: 350px;">
+            <div class="form-check d-flex align-items-center">
+                <input class="form-check-input me-2" type="checkbox" id="showCancelled" />
+                <label class="form-check-label mb-0" for="showCancelled">Show Cancelled Campaigns</label>
+            </div>
+            <div>
+                <button type="button" class="search-button" @onclick="OnSearchClicked">
+                    <img src="/images/icons/icon ion-md-search.png" />
+                    Search
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public List<string> Users { get; set; } = new();
+
+    [Parameter]
+    public List<string> Managers { get; set; } = new();
+
+    [Parameter]
+    public string CampaignName { get; set; }
+
+    [Parameter]
+    public string CreatedBy { get; set; }
+
+    [Parameter]
+    public DateTime? DateFrom { get; set; }
+
+    [Parameter]
+    public DateTime? DateTo { get; set; }
+
+    [Parameter]
+    public string CampaignRef { get; set; }
+
+    [Parameter]
+    public string ProjectManager { get; set; }
+
+    [Parameter]
+    public EventCallback OnSearchClicked { get; set; }
+}

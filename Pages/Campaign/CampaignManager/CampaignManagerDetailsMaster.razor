@@ -1,0 +1,47 @@
+﻿@using ZaraBlazorStandlone.Pages.Shared
+@using ZaraBlazorStandlone.Models.Enum
+<CampaignManagerNavBar OnTabSelected="OnTabSelected"
+                       selectedTab="@activeTab" />
+<div class="tab-content mt-4">
+    @if (activeTab == TabType.Details)
+    {
+        <CampaignManagerDetails OnCancelClicked="HandleCancel" />
+    }
+    else if (activeTab == TabType.Allocation)
+    {
+        <CampaignManagerAllocation></CampaignManagerAllocation>
+    }
+    else if (activeTab == TabType.Elements)
+    {
+        <CampaignManagerElement></CampaignManagerElement>
+    }
+    else if (activeTab == TabType.Stores)
+    {
+        
+    }
+    else if (activeTab == TabType.Files)
+    {
+       
+    }
+    else if (activeTab == TabType.Prices)
+    {
+      
+    }
+</div>
+@code{
+
+    [Parameter]
+    public EventCallback OnCancelClicked { get; set; }
+
+    public TabType activeTab = TabType.Details;
+
+    private void OnTabSelected(TabType args)
+    {
+
+        activeTab = args;
+    }
+    private void HandleCancel()
+    {
+        OnCancelClicked.InvokeAsync();
+    }
+}

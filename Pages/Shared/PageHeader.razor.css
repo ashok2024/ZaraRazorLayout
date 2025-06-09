@@ -1,0 +1,226 @@
+﻿.rectangle-156027,
+.rectangle-156027 * {
+    box-sizing: border-box;
+}
+
+.rectangle-156027 {
+    background: var(--white, #ffffff);
+    border-radius: 15px;
+    border-style: solid;
+    border-color: #dadcf8;
+    border-width: 1px;
+    height: 90px;
+    position: relative;
+    box-shadow: 0px 0px 7.5px 0px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.campaign-manager,
+.campaign-manager * {
+    box-sizing: border-box;
+}
+
+.campaign-manager {
+    display: flex;
+    align-items: center; /* vertical center alignment */
+    gap: 10px; /* spacing between items */
+    color: #46679f;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    position: relative;
+}
+.group-175398,
+.group-175398 * {
+    box-sizing: border-box;
+}
+
+.group-175398 {
+    width: 300px;
+    height: 40px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end; /* or space-between / space-evenly based on layout */
+    align-items: center;
+    gap: 10px; /* optional spacing between icons */    
+}
+
+.group-175395 {
+    width: 40px;
+    height: 40px;
+    position: static;
+}
+
+.rectangle-156024 {
+    background: var(--white, #ffffff);
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #dfe1f9;
+    border-width: 1px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    aspect-ratio: 1;
+}
+
+.group-175337 {
+    width: 20.2px;
+    height: 23.09px;
+    position: absolute;
+    left: 9.9px;
+    top: 8.7px;
+    overflow: visible;
+}
+
+.group-175396 {
+    width: 40px;
+    height: 40px;
+    position: static;
+}
+
+.rectangle-1560242 {
+    background: var(--white, #ffffff);
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #dfe1f9;
+    border-width: 1px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 65px;
+    top: 0px;
+    aspect-ratio: 1;
+}
+
+.group-175339 {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 65px;
+    top: 0px;
+    overflow: visible;
+}
+
+.group-175397 {
+    width: 40px;
+    height: 40px;
+    position: static;
+}
+
+.rectangle-1560243 {
+    background: var(--white, #ffffff);
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #dfe1f9;
+    border-width: 1px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 130px;
+    top: 0px;
+    aspect-ratio: 1;
+}
+
+.group-175336 {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 130px;
+    top: 0px;
+    overflow: visible;
+}
+
+.rectangle-156028 {
+    background: var(--white, #ffffff);
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #dfe1f9;
+    border-width: 1px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 195px;
+    top: 0px;
+    aspect-ratio: 1;
+}
+
+.group-175338 {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 195px;
+    top: 0px;
+    overflow: visible;
+}
+
+.rectangle-156029 {
+    background: var(--white, #ffffff);
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #dfe1f9;
+    border-width: 1px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 260px;
+    top: 0px;
+    aspect-ratio: 1;
+}
+
+.group-175340 {
+    width: 40px;
+    height: 40px;
+    position: static;
+}
+
+.rectangle-155995 {
+    background: var(--rgb26-28-54, #1a1c36);
+    border-style: solid;
+    border-color: #1a1c36;
+    border-width: 1px;
+    opacity: 0;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 260px;
+    top: 0px;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.1);
+}
+
+.icon-akar-newspaper {
+    width: 20.09px;
+    height: 20.09px;
+    position: absolute;
+    left: 269.89px;
+    top: 10px;
+    overflow: visible;
+}
+.icon-material-round-keyboard-arrow-right,
+.icon-material-round-keyboard-arrow-right * {
+    box-sizing: border-box;
+}
+
+.icon-material-round-keyboard-arrow-right {
+    width: 9.88px;
+    height: 16.76px;
+    position: relative;
+    overflow: visible;
+}
+.clearance-event-campaign-ref-campaign-no-1806,
+.clearance-event-campaign-ref-campaign-no-1806 * {
+    box-sizing: border-box;
+}
+
+.clearance-event-campaign-ref-campaign-no-1806 {
+    color: #0a0a0a;
+    text-align: left;
+    font-family: "Nunito-Medium", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+}

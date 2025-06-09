@@ -1,0 +1,17 @@
+﻿@using Microsoft.AspNetCore.Components.Routing
+@using Microsoft.AspNetCore.Components
+
+<div class="option3">
+    <NavLink href="@Href" class="option3" Match="NavLinkMatch.All" style="text-decoration:none !important;margin-left:10px">
+        <div class="frame-6">
+            <img class="nav-icon" src="@Icon" alt="@Label" />
+            <div class="dashboard2">@Label</div>
+        </div>
+    </NavLink>
+</div>
+
+@code {
+    [Parameter] public string Href { get; set; } = "/";
+    [Parameter] public string Icon { get; set; } = "";
+    [Parameter] public string Label { get; set; } = "";
+}

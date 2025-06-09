@@ -1,0 +1,24 @@
+﻿@inherits LayoutComponentBase
+<div class="page d-flex">
+    <div class="@SidebarCssClass" id="sidebar-container">
+        <ZaraBlazorStandlone.Pages.Sidebar.SidebarDashboard />
+    </div>
+
+    <main class="@MainCssClass" style="overflow:hidden !important; padding:10px ">
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div>
+
+@code {
+    private bool isSidebarOpen = true;
+
+    private string SidebarCssClass => isSidebarOpen ? "sidebar-custom open" : "sidebar-custom collapsed";
+    private string MainCssClass => isSidebarOpen ? "main open" : "main collapsed";
+
+    void ToggleSidebar()
+    {
+        isSidebarOpen = !isSidebarOpen;
+    }
+}
