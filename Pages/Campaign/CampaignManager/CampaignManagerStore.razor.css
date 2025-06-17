@@ -1,0 +1,2417 @@
+﻿.group-175427,
+.group-175427 * {
+    box-sizing: border-box;
+}
+
+.group-175427 {
+    position: relative;
+}
+
+.rectangle-155802 {
+    background: var(--primary, #1c3258);
+    border-radius: 18px;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 1px;
+    width: 81px;
+    height: 35px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.by-item {
+    color: #ffffff;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    left: 16px;
+    top: 8px;
+}
+
+.by-item-span {
+}
+
+.by-item-span2 {
+    color: var(--white, #ffffff);
+}
+
+.group-175428,
+.group-175428 * {
+    box-sizing: border-box;
+}
+
+.group-175428 {
+    position: relative;
+}
+
+.rectangle-155802 {
+    border-radius: 18px;
+    border-style: solid;
+    border-color: #1c3258;
+    border-width: 1px;
+    width: 77px;
+    height: 35px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.by-site {
+    color: #1c3258;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    left: 16px;
+    top: 8px;
+}
+
+.by-site-span {
+}
+
+.by-site-span2 {
+    color: var(--primary, #1c3258);
+}
+
+.production-price-459-08-campaign-costs-0-00-total-price-459-08,
+.production-price-459-08-campaign-costs-0-00-total-price-459-08 * {
+    box-sizing: border-box;
+}
+
+.production-price-459-08-campaign-costs-0-00-total-price-459-08 {
+    text-align: left;
+    font-family: "-", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    position: relative;
+}
+
+.production-price-459-08-campaign-costs-0-00-total-price-459-08-span {
+    color: #6f6f6f;
+    font-family: "Nunito-Medium", sans-serif;
+    font-weight: 500;
+}
+
+.production-price-459-08-campaign-costs-0-00-total-price-459-08-span2 {
+    color: #212121;
+    font-family: "Nunito-Medium", sans-serif;
+    font-weight: 500;
+}
+
+.production-price-459-08-campaign-costs-0-00-total-price-459-08-span3 {
+    color: #212121;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-weight: 600;
+}
+
+.production-price-459-08-campaign-costs-0-00-total-price-459-08-span4 {
+    color: #6f6f6f;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-weight: 600;
+}
+
+.custom-btn {
+    border-radius: 50px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    padding: 6px 18px;
+    font-size: 14px;
+}
+
+.btn-primary {
+    background-color: #1c3258;
+    border-color: #1c3258;
+    border-radius: 2rem;
+}
+
+.btn-outline-secondary {
+    border-radius: 2rem;
+    color: #1c3258;
+    border-color: #1c3258;
+}
+
+.group-229081,
+.group-229081 * {
+    box-sizing: border-box;
+}
+
+.group-229081 {
+    position: relative;
+}
+
+.campaign {
+    color: #212121;
+    text-align: left;
+    font-family: "Inter-Medium", sans-serif;
+    font-size: 1px;
+    font-weight: 500;
+    position: absolute;
+    left: 29px;
+    top: 190px;
+}
+
+.campaign-span {
+}
+
+.campaign-span2 {
+    color: var(--rgb33-33-33, #212121);
+}
+
+.rectangle-155986 {
+    background: var(--secondry, #46679f);
+    border-radius: 5px;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 1px;
+    opacity: 0.1;
+    width: 1698px;
+    height: 45px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.element-code {
+    color: #1c3258;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.element-code-span {
+}
+
+.element-code-span2 {
+    color: var(--primary, #1c3258);
+}
+
+.element-description {
+    color: #1c3258;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 1376px;
+    bottom: 597px;
+    top: 13px;
+}
+
+.element-description-span {
+}
+
+.element-description-span2 {
+    color: var(--primary, #1c3258);
+}
+
+.element-type {
+    color: #1c3258;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 1183px;
+    bottom: 597px;
+    top: 13px;
+}
+
+.element-type-span {
+}
+
+.element-type-span2 {
+    color: var(--primary, #1c3258);
+}
+
+.sites {
+    color: #1c3258;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 1018px;
+    bottom: 597px;
+    top: 13px;
+}
+
+.sites-span {
+}
+
+.sites-span2 {
+    color: var(--primary, #1c3258);
+}
+
+.allocated-qty {
+    color: #1c3258;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 839px;
+    bottom: 597px;
+    top: 13px;
+}
+
+.allocated-qty-span {
+}
+
+.allocated-qty-span2 {
+    color: var(--primary, #1c3258);
+}
+
+.overs {
+    color: #1c3258;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 718px;
+    bottom: 597px;
+    top: 13px;
+}
+
+.overs-span {
+}
+
+.overs-span2 {
+    color: var(--primary, #1c3258);
+}
+
+.overs-qty {
+    color: #1c3258;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 556px;
+    bottom: 597px;
+    top: 13px;
+}
+
+.overs-qty-span {
+}
+
+.overs-qty-span2 {
+    color: var(--primary, #1c3258);
+}
+
+.total-qty {
+    color: #1c3258;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 375px;
+    bottom: 597px;
+    top: 13px;
+}
+
+.price {
+    color: #1c3258;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 257px;
+    bottom: 597px;
+    top: 13px;
+}
+
+.price-span {
+}
+
+.price-span2 {
+    color: var(--primary, #1c3258);
+}
+
+.co-2-e {
+    color: #1c3258;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 113px;
+    bottom: 597px;
+    top: 13px;
+}
+
+.co-2-e-span {
+}
+
+.co-2-e-span2 {
+    color: var(--primary, #1c3258);
+}
+
+.tr-text-custome {
+    color: #0a0a0a;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+}
+
+.clearance {
+    color: #0a0a0a;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 1442px;
+    left: 192px;
+    bottom: 520px;
+    top: 90px;
+}
+.icon-material-round-arrow-drop-down,
+.icon-material-round-arrow-drop-down * {
+    box-sizing: border-box;
+}
+
+.icon-material-round-arrow-drop-down {
+    opacity: 1;
+    width: 8.43px;
+    height: 5.39px;
+    position: relative;
+    overflow: visible;
+}
+.ellipse-14,
+.ellipse-14 * {
+    box-sizing: border-box;
+}
+
+.ellipse-14-custome-button {
+    background: #eceff5;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 1px;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+.icon-button {
+    all: unset; /* Clear default button styling */
+    cursor: pointer;
+}
+
+
+.a-0-poster {
+    color: #0a0a0a;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 1207px;
+    left: 427px;
+    bottom: 520px;
+    top: 90px;
+}
+
+._33 {
+    color: #0a0a0a;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 908px;
+    left: 773px;
+    bottom: 520px;
+    top: 90px;
+}
+
+._35 {
+    color: #0a0a0a;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 418px;
+    left: 1263px;
+    bottom: 520px;
+    top: 90px;
+}
+
+._35-span {
+}
+
+._35-span2 {
+    color: var(--black, #0a0a0a);
+}
+
+._174-65 {
+    color: #0a0a0a;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 231px;
+    left: 1409px;
+    bottom: 520px;
+    top: 90px;
+}
+
+._1-76 {
+    color: #0a0a0a;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 120px;
+    left: 1549px;
+    bottom: 520px;
+    top: 90px;
+}
+
+.group-175330 {
+    width: 102.66px;
+    height: 35px;
+    position: static;
+}
+
+.rectangle-155802 {
+    background: var(--white, #ffffff);
+    border-radius: 3px;
+    border-style: solid;
+    border-color: #1c3258;
+    border-width: 1px;
+    width: 102.66px;
+    height: 35px;
+    position: absolute;
+    left: 929px;
+    top: 81.5px;
+}
+
+.icon-ion-md-search {
+    opacity: 0;
+    width: 15.66px;
+    height: 15.66px;
+    position: absolute;
+    left: 1008px;
+    top: 91.17px;
+    overflow: visible;
+}
+
+._5-00 {
+    color: #0a0a0a;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    left: 937px;
+    top: 89.5px;
+}
+
+._5-00-span {
+}
+
+._5-00-span2 {
+    color: var(--black, #0a0a0a);
+}
+
+.group-175331 {
+    width: 102.66px;
+    height: 35px;
+    position: static;
+}
+
+.rectangle-1558022 {
+    background: var(--white, #ffffff);
+    border-radius: 3px;
+    border-style: solid;
+    border-color: #1c3258;
+    border-width: 1px;
+    width: 102.66px;
+    height: 35px;
+    position: absolute;
+    left: 1080px;
+    top: 81.5px;
+}
+
+.icon-ion-md-search2 {
+    opacity: 0;
+    width: 15.66px;
+    height: 15.66px;
+    position: absolute;
+    left: 1159px;
+    top: 91.17px;
+    overflow: visible;
+}
+
+._5-002 {
+    color: #0a0a0a;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    left: 1088px;
+    top: 89.5px;
+}
+
+._5-002-span {
+}
+
+._5-002-span2 {
+    color: var(--black, #0a0a0a);
+}
+
+.ellipse-14 {
+    background: #eceff5;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 1px;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 1661px;
+    top: 87px;
+}
+
+.rectangle-155987 {
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #6f6f6f;
+    border-width: 1px;
+    opacity: 0.3;
+    width: 1698px;
+    height: 356px;
+    position: absolute;
+    left: 0px;
+    top: 57px;
+}
+
+.rectangle-155988 {
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #6f6f6f;
+    border-width: 1px;
+    opacity: 0.3;
+    width: 1603px;
+    height: 261px;
+    position: absolute;
+    left: 80px;
+    top: 137px;
+}
+
+.number {
+    color: #1c3258;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 1537px;
+    left: 109px;
+    bottom: 457px;
+    top: 153px;
+}
+
+.number-span {
+}
+
+.number-span2 {
+    color: var(--primary, #1c3258);
+}
+
+.name {
+    color: #1c3258;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 1351px;
+    left: 309px;
+    bottom: 457px;
+    top: 153px;
+}
+
+.name-span {
+}
+
+.name-span2 {
+    color: var(--primary, #1c3258);
+}
+
+.contact-name {
+    color: #1c3258;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 1035px;
+    left: 572px;
+    bottom: 457px;
+    top: 153px;
+}
+
+.contact-name-span {
+}
+
+.contact-name-span2 {
+    color: var(--primary, #1c3258);
+}
+
+.contact-number {
+    color: #1c3258;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 733px;
+    left: 860px;
+    bottom: 457px;
+    top: 153px;
+}
+
+.city {
+    color: #1c3258;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 509px;
+    left: 1163px;
+    bottom: 457px;
+    top: 153px;
+}
+
+.city-span {
+}
+
+.city-span2 {
+    color: var(--primary, #1c3258);
+}
+
+.country {
+    color: #1c3258;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 274px;
+    left: 1373px;
+    bottom: 457px;
+    top: 153px;
+}
+
+.qty {
+    color: #1c3258;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 62px;
+    left: 1612px;
+    bottom: 457px;
+    top: 153px;
+}
+
+.qty-span {
+}
+
+.qty-span2 {
+    color: var(--primary, #1c3258);
+}
+
+._101 {
+    color: #212121;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 1560px;
+    left: 112px;
+    bottom: 406px;
+    top: 204px;
+}
+
+._101-span {
+}
+
+._101-span2 {
+    color: var(--rgb33-33-33, #212121);
+}
+
+.london-store {
+    color: #212121;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 1302px;
+    left: 312px;
+    bottom: 406px;
+    top: 204px;
+}
+
+.london-store-span {
+}
+
+.london-store-span2 {
+    color: var(--rgb33-33-33, #212121);
+}
+
+.jane-doe {
+    color: #212121;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 1067px;
+    left: 575px;
+    bottom: 406px;
+    top: 204px;
+}
+
+.jane-doe-span {
+}
+
+.jane-doe-span2 {
+    color: var(--rgb33-33-33, #212121);
+}
+
+._61-098765432 {
+    color: #212121;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 728px;
+    left: 863px;
+    bottom: 406px;
+    top: 204px;
+}
+
+._61-098765432-span {
+}
+
+._61-098765432-span2 {
+    color: var(--rgb33-33-33, #212121);
+}
+
+.london {
+    color: #212121;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 486px;
+    left: 1164px;
+    bottom: 406px;
+    top: 204px;
+}
+
+.london-span {
+}
+
+.london-span2 {
+    color: var(--rgb33-33-33, #212121);
+}
+
+.united-kingdom {
+    color: #212121;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 218px;
+    left: 1376px;
+    bottom: 406px;
+    top: 204px;
+}
+
+.united-kingdom-span {
+}
+
+.united-kingdom-span2 {
+    color: var(--rgb33-33-33, #212121);
+}
+
+._102 {
+    color: #212121;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 66px;
+    left: 1615px;
+    bottom: 406px;
+    top: 204px;
+}
+
+._102-span {
+}
+
+._102-span2 {
+    color: var(--rgb33-33-33, #212121);
+}
+
+.rectangle-155989 {
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #6f6f6f;
+    border-width: 1px;
+    opacity: 0.3;
+    width: 1603px;
+    height: 51px;
+    position: absolute;
+    left: 80px;
+    top: 137px;
+}
+
+._1012 {
+    color: #212121;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 1560px;
+    left: 112px;
+    bottom: 367px;
+    top: 243px;
+}
+
+._1012-span {
+}
+
+._1012-span2 {
+    color: var(--rgb33-33-33, #212121);
+}
+
+.london-store2 {
+    color: #212121;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 1302px;
+    left: 312px;
+    bottom: 367px;
+    top: 243px;
+}
+
+.london-store-2-span {
+}
+
+.london-store-2-span2 {
+    color: var(--rgb33-33-33, #212121);
+}
+
+.jane-doe2 {
+    color: #212121;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 1067px;
+    left: 575px;
+    bottom: 367px;
+    top: 243px;
+}
+
+.jane-doe-2-span {
+}
+
+.jane-doe-2-span2 {
+    color: var(--rgb33-33-33, #212121);
+}
+
+._61-0987654322 {
+    color: #212121;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 728px;
+    left: 863px;
+    bottom: 367px;
+    top: 243px;
+}
+
+._61-0987654322-span {
+}
+
+._61-0987654322-span2 {
+    color: var(--rgb33-33-33, #212121);
+}
+
+.london2 {
+    color: #212121;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 486px;
+    left: 1164px;
+    bottom: 367px;
+    top: 243px;
+}
+
+.london-2-span {
+}
+
+.london-2-span2 {
+    color: var(--rgb33-33-33, #212121);
+}
+
+.united-kingdom2 {
+    color: #212121;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 218px;
+    left: 1376px;
+    bottom: 367px;
+    top: 243px;
+}
+
+.united-kingdom-2-span {
+}
+
+.united-kingdom-2-span2 {
+    color: var(--rgb33-33-33, #212121);
+}
+
+._103 {
+    color: #212121;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 66px;
+    left: 1615px;
+    bottom: 367px;
+    top: 243px;
+}
+
+._103-span {
+}
+
+._103-span2 {
+    color: var(--rgb33-33-33, #212121);
+}
+
+._1013 {
+    color: #212121;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 1560px;
+    left: 112px;
+    bottom: 328px;
+    top: 282px;
+}
+
+._1013-span {
+}
+
+._1013-span2 {
+    color: var(--rgb33-33-33, #212121);
+}
+
+.london-store3 {
+    color: #212121;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 1302px;
+    left: 312px;
+    bottom: 328px;
+    top: 282px;
+}
+
+.london-store-3-span {
+}
+
+.london-store-3-span2 {
+    color: var(--rgb33-33-33, #212121);
+}
+
+.jane-doe3 {
+    color: #212121;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 1067px;
+    left: 575px;
+    bottom: 328px;
+    top: 282px;
+}
+
+.jane-doe-3-span {
+}
+
+.jane-doe-3-span2 {
+    color: var(--rgb33-33-33, #212121);
+}
+
+._61-0987654323 {
+    color: #212121;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 728px;
+    left: 863px;
+    bottom: 328px;
+    top: 282px;
+}
+
+._61-0987654323-span {
+}
+
+._61-0987654323-span2 {
+    color: var(--rgb33-33-33, #212121);
+}
+
+.london3 {
+    color: #212121;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 486px;
+    left: 1164px;
+    bottom: 328px;
+    top: 282px;
+}
+
+.london-3-span {
+}
+
+.london-3-span2 {
+    color: var(--rgb33-33-33, #212121);
+}
+
+.united-kingdom3 {
+    color: #212121;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 218px;
+    left: 1376px;
+    bottom: 328px;
+    top: 282px;
+}
+
+.united-kingdom-3-span {
+}
+
+.united-kingdom-3-span2 {
+    color: var(--rgb33-33-33, #212121);
+}
+
+._104 {
+    color: #212121;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 66px;
+    left: 1615px;
+    bottom: 328px;
+    top: 282px;
+}
+
+._104-span {
+}
+
+._104-span2 {
+    color: var(--rgb33-33-33, #212121);
+}
+
+._1014 {
+    color: #212121;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 1560px;
+    left: 112px;
+    bottom: 289px;
+    top: 321px;
+}
+
+._1014-span {
+}
+
+._1014-span2 {
+    color: var(--rgb33-33-33, #212121);
+}
+
+.london-store4 {
+    color: #212121;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 1302px;
+    left: 312px;
+    bottom: 289px;
+    top: 321px;
+}
+
+.london-store-4-span {
+}
+
+.london-store-4-span2 {
+    color: var(--rgb33-33-33, #212121);
+}
+
+.jane-doe4 {
+    color: #212121;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 1067px;
+    left: 575px;
+    bottom: 289px;
+    top: 321px;
+}
+
+.jane-doe-4-span {
+}
+
+.jane-doe-4-span2 {
+    color: var(--rgb33-33-33, #212121);
+}
+
+._61-0987654324 {
+    color: #212121;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 728px;
+    left: 863px;
+    bottom: 289px;
+    top: 321px;
+}
+
+._61-0987654324-span {
+}
+
+._61-0987654324-span2 {
+    color: var(--rgb33-33-33, #212121);
+}
+
+.london4 {
+    color: #212121;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 486px;
+    left: 1164px;
+    bottom: 289px;
+    top: 321px;
+}
+
+.london-4-span {
+}
+
+.london-4-span2 {
+    color: var(--rgb33-33-33, #212121);
+}
+
+.united-kingdom4 {
+    color: #212121;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 218px;
+    left: 1376px;
+    bottom: 289px;
+    top: 321px;
+}
+
+.united-kingdom-4-span {
+}
+
+.united-kingdom-4-span2 {
+    color: var(--rgb33-33-33, #212121);
+}
+
+._105 {
+    color: #212121;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 66px;
+    left: 1615px;
+    bottom: 289px;
+    top: 321px;
+}
+
+._105-span {
+}
+
+._105-span2 {
+    color: var(--rgb33-33-33, #212121);
+}
+
+._1015 {
+    color: #212121;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 1560px;
+    left: 112px;
+    bottom: 251px;
+    top: 359px;
+}
+
+._1015-span {
+}
+
+._1015-span2 {
+    color: var(--rgb33-33-33, #212121);
+}
+
+.london-store5 {
+    color: #212121;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 1302px;
+    left: 312px;
+    bottom: 251px;
+    top: 359px;
+}
+
+.london-store-5-span {
+}
+
+.london-store-5-span2 {
+    color: var(--rgb33-33-33, #212121);
+}
+
+.jane-doe5 {
+    color: #212121;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 1067px;
+    left: 575px;
+    bottom: 251px;
+    top: 359px;
+}
+
+.jane-doe-5-span {
+}
+
+.jane-doe-5-span2 {
+    color: var(--rgb33-33-33, #212121);
+}
+
+._61-0987654325 {
+    color: #212121;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 728px;
+    left: 863px;
+    bottom: 251px;
+    top: 359px;
+}
+
+._61-0987654325-span {
+}
+
+._61-0987654325-span2 {
+    color: var(--rgb33-33-33, #212121);
+}
+
+.london5 {
+    color: #212121;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 486px;
+    left: 1164px;
+    bottom: 251px;
+    top: 359px;
+}
+
+.london-5-span {
+}
+
+.london-5-span2 {
+    color: var(--rgb33-33-33, #212121);
+}
+
+.united-kingdom5 {
+    color: #212121;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 218px;
+    left: 1376px;
+    bottom: 251px;
+    top: 359px;
+}
+
+.united-kingdom-5-span {
+}
+
+.united-kingdom-5-span2 {
+    color: var(--rgb33-33-33, #212121);
+}
+
+._106 {
+    color: #212121;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 66px;
+    left: 1615px;
+    bottom: 251px;
+    top: 359px;
+}
+
+._106-span {
+}
+
+._106-span2 {
+    color: var(--rgb33-33-33, #212121);
+}
+
+.icon-material-round-arrow-drop-down {
+    opacity: 1;
+    width: 8.43px;
+    height: 5.39px;
+    position: absolute;
+    left: 1667.79px;
+    top: 95.3px;
+    overflow: visible;
+}
+
+.group-175431 {
+    width: 1698px;
+    height: 59px;
+    position: static;
+}
+
+._2225722 {
+    color: #0a0a0a;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 1623.99px;
+    left: 23.0078125px;
+    bottom: 161.5px;
+    top: 448.5px;
+}
+
+.clearance2 {
+    color: #0a0a0a;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 1441.99px;
+    left: 192.0078125px;
+    bottom: 161.5px;
+    top: 448.5px;
+}
+
+.a-0-poster2 {
+    color: #0a0a0a;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 1206.99px;
+    left: 427.0078125px;
+    bottom: 161.5px;
+    top: 448.5px;
+}
+
+._107 {
+    color: #0a0a0a;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 1032.99px;
+    left: 648.0078125px;
+    bottom: 161.5px;
+    top: 448.5px;
+}
+
+._332 {
+    color: #0a0a0a;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 907.99px;
+    left: 773.0078125px;
+    bottom: 161.5px;
+    top: 448.5px;
+}
+
+._352 {
+    color: #0a0a0a;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 415.99px;
+    left: 1265.0078125px;
+    bottom: 161.5px;
+    top: 448.5px;
+}
+
+._352-span {
+}
+
+._352-span2 {
+    color: var(--black, #0a0a0a);
+}
+
+._174-652 {
+    color: #0a0a0a;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 230.99px;
+    left: 1409.0078125px;
+    bottom: 161.5px;
+    top: 448.5px;
+}
+
+._1-762 {
+    color: #0a0a0a;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 119.99px;
+    left: 1549.0078125px;
+    bottom: 161.5px;
+    top: 448.5px;
+}
+
+.group-175429 {
+    width: 102.66px;
+    height: 35px;
+    position: static;
+}
+
+.rectangle-1558023 {
+    background: var(--white, #ffffff);
+    border-radius: 3px;
+    border-style: solid;
+    border-color: #1c3258;
+    border-width: 1px;
+    width: 102.66px;
+    height: 35px;
+    position: absolute;
+    left: 936px;
+    top: 440px;
+}
+
+.icon-ion-md-search3 {
+    opacity: 0;
+    width: 15.66px;
+    height: 15.66px;
+    position: absolute;
+    left: 1015px;
+    top: 449.67px;
+    overflow: visible;
+}
+
+._5-003 {
+    color: #0a0a0a;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    left: 944px;
+    top: 448px;
+}
+
+._5-003-span {
+}
+
+._5-003-span2 {
+    color: var(--black, #0a0a0a);
+}
+
+.group-175430 {
+    width: 102.66px;
+    height: 35px;
+    position: static;
+}
+
+.rectangle-1558024 {
+    background: var(--white, #ffffff);
+    border-radius: 3px;
+    border-style: solid;
+    border-color: #1c3258;
+    border-width: 1px;
+    width: 102.66px;
+    height: 35px;
+    position: absolute;
+    left: 1085.42px;
+    top: 440px;
+}
+
+.icon-ion-md-search4 {
+    opacity: 0;
+    width: 15.66px;
+    height: 15.66px;
+    position: absolute;
+    left: 1164.42px;
+    top: 449.67px;
+    overflow: visible;
+}
+
+._5-004 {
+    color: #0a0a0a;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    left: 1093.42px;
+    top: 448px;
+}
+
+._5-004-span {
+}
+
+._5-004-span2 {
+    color: var(--black, #0a0a0a);
+}
+
+.ellipse-35 {
+    background: #eceff5;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 1px;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 1661.01px;
+    top: 445.5px;
+}
+
+.rectangle-156039 {
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #6f6f6f;
+    border-width: 1px;
+    opacity: 0.3;
+    width: 1698px;
+    height: 59px;
+    position: absolute;
+    left: 0px;
+    top: 428px;
+}
+
+.icon-material-round-arrow-drop-down2 {
+    opacity: 1;
+    width: 8.43px;
+    height: 5.39px;
+    position: absolute;
+    left: 1667.79px;
+    top: 453.8px;
+    overflow: visible;
+}
+
+.group-175432 {
+    width: 1698px;
+    height: 59px;
+    position: static;
+}
+
+._2225723 {
+    color: #0a0a0a;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 1623.99px;
+    left: 23.0078125px;
+    bottom: 90.5px;
+    top: 519.5px;
+}
+
+.clearance3 {
+    color: #0a0a0a;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 1441.99px;
+    left: 192.0078125px;
+    bottom: 90.5px;
+    top: 519.5px;
+}
+
+.a-0-poster3 {
+    color: #0a0a0a;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 1206.99px;
+    left: 427.0078125px;
+    bottom: 90.5px;
+    top: 519.5px;
+}
+
+._108 {
+    color: #0a0a0a;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 1032.99px;
+    left: 648.0078125px;
+    bottom: 90.5px;
+    top: 519.5px;
+}
+
+._333 {
+    color: #0a0a0a;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 907.99px;
+    left: 773.0078125px;
+    bottom: 90.5px;
+    top: 519.5px;
+}
+
+._353 {
+    color: #0a0a0a;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 415.99px;
+    left: 1265.0078125px;
+    bottom: 90.5px;
+    top: 519.5px;
+}
+
+._353-span {
+}
+
+._353-span2 {
+    color: var(--black, #0a0a0a);
+}
+
+._174-653 {
+    color: #0a0a0a;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 230.99px;
+    left: 1409.0078125px;
+    bottom: 90.5px;
+    top: 519.5px;
+}
+
+._1-763 {
+    color: #0a0a0a;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 119.99px;
+    left: 1549.0078125px;
+    bottom: 90.5px;
+    top: 519.5px;
+}
+
+.rectangle-1558025 {
+    background: var(--white, #ffffff);
+    border-radius: 3px;
+    border-style: solid;
+    border-color: #1c3258;
+    border-width: 1px;
+    width: 102.66px;
+    height: 35px;
+    position: absolute;
+    left: 936px;
+    top: 511px;
+}
+
+.icon-ion-md-search5 {
+    opacity: 0;
+    width: 15.66px;
+    height: 15.66px;
+    position: absolute;
+    left: 1015px;
+    top: 520.67px;
+    overflow: visible;
+}
+
+._5-005 {
+    color: #0a0a0a;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    left: 944px;
+    top: 519px;
+}
+
+._5-005-span {
+}
+
+._5-005-span2 {
+    color: var(--black, #0a0a0a);
+}
+
+.rectangle-1558026 {
+    background: var(--white, #ffffff);
+    border-radius: 3px;
+    border-style: solid;
+    border-color: #1c3258;
+    border-width: 1px;
+    width: 102.66px;
+    height: 35px;
+    position: absolute;
+    left: 1085.42px;
+    top: 511px;
+}
+
+.icon-ion-md-search6 {
+    opacity: 0;
+    width: 15.66px;
+    height: 15.66px;
+    position: absolute;
+    left: 1164.42px;
+    top: 520.67px;
+    overflow: visible;
+}
+
+._5-006 {
+    color: #0a0a0a;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    left: 1093.42px;
+    top: 519px;
+}
+
+._5-006-span {
+}
+
+._5-006-span2 {
+    color: var(--black, #0a0a0a);
+}
+
+.ellipse-352 {
+    background: #eceff5;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 1px;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 1661.01px;
+    top: 516.5px;
+}
+
+.rectangle-1560392 {
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #6f6f6f;
+    border-width: 1px;
+    opacity: 0.3;
+    width: 1698px;
+    height: 59px;
+    position: absolute;
+    left: 0px;
+    top: 499px;
+}
+
+.icon-material-round-arrow-drop-down3 {
+    opacity: 1;
+    width: 8.43px;
+    height: 5.39px;
+    position: absolute;
+    left: 1667.79px;
+    top: 524.8px;
+    overflow: visible;
+}
+
+.group-175433 {
+    width: 1698px;
+    height: 59px;
+    position: static;
+}
+
+._2225724 {
+    color: #0a0a0a;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 1623.99px;
+    left: 23.0078125px;
+    bottom: 19.5px;
+    top: 590.5px;
+}
+
+.clearance4 {
+    color: #0a0a0a;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 1441.99px;
+    left: 192.0078125px;
+    bottom: 19.5px;
+    top: 590.5px;
+}
+
+.a-0-poster4 {
+    color: #0a0a0a;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 1206.99px;
+    left: 427.0078125px;
+    bottom: 19.5px;
+    top: 590.5px;
+}
+
+._109 {
+    color: #0a0a0a;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 1032.99px;
+    left: 648.0078125px;
+    bottom: 19.5px;
+    top: 590.5px;
+}
+
+._334 {
+    color: #0a0a0a;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 907.99px;
+    left: 773.0078125px;
+    bottom: 19.5px;
+    top: 590.5px;
+}
+
+._354 {
+    color: #0a0a0a;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 415.99px;
+    left: 1265.0078125px;
+    bottom: 19.5px;
+    top: 590.5px;
+}
+
+._354-span {
+}
+
+._354-span2 {
+    color: var(--black, #0a0a0a);
+}
+
+._174-654 {
+    color: #0a0a0a;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 230.99px;
+    left: 1409.0078125px;
+    bottom: 19.5px;
+    top: 590.5px;
+}
+
+._1-764 {
+    color: #0a0a0a;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 119.99px;
+    left: 1549.0078125px;
+    bottom: 19.5px;
+    top: 590.5px;
+}
+
+.rectangle-1558027 {
+    background: var(--white, #ffffff);
+    border-radius: 3px;
+    border-style: solid;
+    border-color: #1c3258;
+    border-width: 1px;
+    width: 102.66px;
+    height: 35px;
+    position: absolute;
+    left: 936px;
+    top: 582px;
+}
+
+.icon-ion-md-search7 {
+    opacity: 0;
+    width: 15.66px;
+    height: 15.66px;
+    position: absolute;
+    left: 1015px;
+    top: 591.67px;
+    overflow: visible;
+}
+
+._5-007 {
+    color: #0a0a0a;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    left: 944px;
+    top: 590px;
+}
+
+._5-007-span {
+}
+
+._5-007-span2 {
+    color: var(--black, #0a0a0a);
+}
+
+.rectangle-1558028 {
+    background: var(--white, #ffffff);
+    border-radius: 3px;
+    border-style: solid;
+    border-color: #1c3258;
+    border-width: 1px;
+    width: 102.66px;
+    height: 35px;
+    position: absolute;
+    left: 1085.42px;
+    top: 582px;
+}
+
+.icon-ion-md-search8 {
+    opacity: 0;
+    width: 15.66px;
+    height: 15.66px;
+    position: absolute;
+    left: 1164.42px;
+    top: 591.67px;
+    overflow: visible;
+}
+
+._5-008 {
+    color: #0a0a0a;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    left: 1093.42px;
+    top: 590px;
+}
+
+._5-008-span {
+}
+
+._5-008-span2 {
+    color: var(--black, #0a0a0a);
+}
+
+.ellipse-353 {
+    background: #eceff5;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 1px;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 1661.01px;
+    top: 587.5px;
+}
+
+.rectangle-1560393 {
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #6f6f6f;
+    border-width: 1px;
+    opacity: 0.3;
+    width: 1698px;
+    height: 59px;
+    position: absolute;
+    left: 0px;
+    top: 570px;
+}
+
+.icon-material-round-arrow-drop-down4 {
+    opacity: 1;
+    width: 8.43px;
+    height: 5.39px;
+    position: absolute;
+    left: 1667.79px;
+    top: 595.8px;
+    overflow: visible;
+}
+
+.tr-custome-bg-color {
+    background: var(--secondry, #d3e0f5);
+    border-color: transparent;
+}
+
+.td-custome-b-none {
+    border: none !important;
+}
+
+.custom-row-style {
+    background: white;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    width: 100%;
+    border-collapse: separate;
+}
+table.custom-spacing-table {
+    border-collapse: separate;
+    border-spacing: 0 3px; /* Adds vertical spacing between rows */
+}
+    .custom-row-style td {
+        border-top: 1px solid #dee2e6;
+        border-bottom: 1px solid #dee2e6;
+        vertical-align: middle;
+        padding: 0.5rem;
+    }
+
+        /* Optional: rounded corners */
+        .custom-row-style td:first-child {
+            border-left: 1px solid #dee2e6;
+            border-top-left-radius: 6px;
+            border-bottom-left-radius: 6px;
+        }
+
+        .custom-row-style td:last-child {
+            border-right: 1px solid #dee2e6;
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
+        }
+table {
+    border-collapse: separate;
+    border-spacing: 0 10px; /* Adds vertical space between rows */
+}
+
+.sub-table {
+    width: 100%;
+    margin: 0;
+    background-color: #fff;
+    border-collapse: separate;
+    border-spacing: 0;
+    box-shadow: none;
+    font-size: 0.85rem;
+}
+
+    /* Table header style */
+    .sub-table thead th {
+        background-color: #f9f9f9;
+        color: #1e1e1e;
+        font-weight: 600;
+        border-bottom: 1px solid #ddd;
+        padding: 6px 12px;
+        white-space: nowrap;
+    }
+
+    /* Table body row cells */
+    .sub-table tbody td {
+        padding: 6px 12px;
+        border: none;
+        color: #333;
+        vertical-align: middle;
+        font-weight: 400;
+    }
+.b-bottom-sub-td-table {
+    border: none !important;
+    border-bottom: 1px solid lightgray !important;
+}
+
+/* Custom cell style for removing bottom border */
+
+
+/* Custom text formatting */
+.tr-text-custome-subtable {
+    color: #333;
+    font-size: 0.85rem;
+}
+
+/* Optional - hover effect for sub-rows */
+.sub-table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Consistent header cell style */
+.tr-custome-bg-color-subtable {
+    background-color: #f9f9f9;
+}
+
+/* Optional styling for element-code class */
+.element-code-sub-table {
+    font-weight: 500;
+    font-size: 0.85rem;
+    color: #1a1a1a;
+}
+
+.my-scrollable-div::-webkit-scrollbar {
+    width: 8px;
+}
+
+.my-scrollable-div::-webkit-scrollbar-track {
+    background: #bfc3ca;
+}
+
+.my-scrollable-div::-webkit-scrollbar-thumb {
+    background-color: #1c3258;
+}
+.campaign-table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+   
+}
+.search-show-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* or center if needed */
+    padding: 10px; /* optional */
+    position: relative;
+}
+.group-175408,
+.group-175408 * {
+    box-sizing: border-box;
+}
+
+.group-175408 {
+    position: relative;
+    width: 195px;
+    height: 22.5px;
+}
+.type-to-search {
+    color: #6f6f6f;
+    text-align: left;
+    font-family: "Inter-Medium", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    position: absolute;
+    bottom: 2.5px;
+    top: 0px;
+}
+
+.type-to-search-span {
+}
+
+.type-to-search-span2 {
+    color: var(--grey-text-and-borders, #6f6f6f);
+}
+.searchBox {
+    border: none;
+    border-bottom: 1.5px solid #000;
+    border-radius: 0;
+    outline: none;
+    padding-left: 0;
+    padding-right: 0;
+    background: transparent;
+    box-shadow: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+    .searchBox:focus {
+        border-bottom-color: #007bff;
+        outline: none;
+        box-shadow: none;
+    }
+
+.group-175407,
+.group-175407 * {
+    box-sizing: border-box;
+}
+
+.group-175407 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* space between children */
+}
+.show {
+    color: #1c3258;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    position: absolute;
+    left: -90px;
+    bottom: 0.5px;
+    top: 0px;
+    -webkit-text-stroke: 1px transparent;
+}
+
+.show-span {
+}
+
+.show-span2 {
+    color: var(--primary, #1c3258);
+}
+._10 {
+    color: #1c3258;
+    text-align: left;
+    font-family: "Nunito-Bold", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    position: relative;
+    left: -45px;
+    border: none;
+    border-bottom: 1px solid;
+    top: 0px;
+    -webkit-text-stroke: 1px transparent;
+}
+
+._10-span {
+}
+
+._10-span2 {
+    color: var(--primary, #1c3258);
+}
+.icon-material-round-arrow-drop-down {
+    width: 8.43px;
+    height: 5.39px;
+    position: absolute;
+    left: 80.81px;
+    top: 6.8px;
+    overflow: visible;
+}

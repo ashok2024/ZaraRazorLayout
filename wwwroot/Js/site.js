@@ -10,4 +10,13 @@ window.registerResizeCallback = (dotNetHelper) => {
         dotNetHelper.invokeMethodAsync("OnResize", window.innerWidth);
     };
 };
+function toggleAll(source) {
+    const checkboxes = document.querySelectorAll('.rowCheckbox');
+    checkboxes.forEach(cb => cb.checked = source.checked);
+}
 
+function updateSelectAll() {
+    const checkboxes = document.querySelectorAll('.rowCheckbox');
+    const allChecked = Array.from(checkboxes).every(cb => cb.checked);
+    document.getElementById('selectAll').checked = allChecked;
+}
