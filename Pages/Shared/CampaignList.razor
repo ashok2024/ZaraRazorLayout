@@ -1,5 +1,4 @@
-﻿
-@using ZaraBlazorStandlone.Models
+﻿@using ZaraBlazorStandlone.Models
 @using ZaraBlazorStandlone.Pages.Campaign.CampaignManager
 @inject IJSRuntime JS
 @* @foreach (var campaign in Campaigns)
@@ -30,6 +29,13 @@
         OnCampaignSelected.InvokeAsync((campaignNo, referenceNo));
     }
 
+    protected override Task OnParametersSetAsync()
+    {
+        TotalPages = (int)Math.Ceiling((double)Campaigns.Count / PageSize);
+        CurrentPage = 1;
+        return base.OnParametersSetAsync();
+    }
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
@@ -42,7 +48,7 @@
         CurrentPage = newPage;
         // LoadCampaigns();
     }
-     private int currentPage = 1;
+    private int currentPage = 1;
     private int totalPages => (int)Math.Ceiling((double)Campaigns.Count / PageSize);
 
     private async Task GoToPage(int page)
@@ -57,6 +63,7 @@
     }
     private async Task PageSizeChanged(ChangeEventArgs e)
     {
+        Console.WriteLine("Dropdown value changed: " + e.Value?.ToString());
         SelectedValue = e.Value?.ToString();
         int pageSize;
 
@@ -68,13 +75,20 @@
         {
             pageSize = 10;
         }
-
+        Console.WriteLine("final pageSize: " + pageSize);
         await OnPageSizeChanged.InvokeAsync(pageSize);
     }
     private async Task PageChanged(int newPage)
     {
         CurrentPage = newPage;
         await OnPageChanged.InvokeAsync(newPage);
+    }
+
+    private async Task OnSelectedValueChanged(string value)
+    {
+        SelectedValue = value;
+        int pageSize = value == "All" ? -1 : int.TryParse(value, out var size) ? size : 10;
+        await OnPageSizeChanged.InvokeAsync(pageSize);
     }
     // private void ChangePage(int newPage)
     // {
@@ -91,7 +105,7 @@
     <img class="line-35" src="/images/icons/Line-35.png" /> *@
 
 <div class="card mt-3">
-    <div class="card-body">
+    <div class="card-body my">
         <div class="search-show-wrapper">
             <div class="group-175408">
                 <div class="type-to-search">
@@ -115,7 +129,7 @@
                 <div class="show">
                     <span><span class="show-span2">Show</span></span>
                 </div>
-                <select class="_10" @onchange="PageSizeChanged" value="@SelectedValue">
+                <select class="_10" @onchange="PageSizeChanged">
                     <option value="5">5</option>
                     <option value="10">10</option>
                     <option value="25">25</option>
@@ -123,11 +137,11 @@
                 </select>
                 <img class="icon-material-round-arrow-drop-down"
                      src="/images/icons/Icon material-round-arrow-drop-down.png" />
-              
+
             </div>
         </div>
         <img class="line-35" src="/images/icons/Line-35.png" />
-        <div class="frame-1">
+        <div class="frame-1 my-scrollable-div">
             @if (Campaigns != null)
             {
                 @foreach (var campaign in Campaigns)
@@ -221,9 +235,9 @@
                         <div class="status">Status</div>
                         <div class="sent-to-supplier">Sent To Supplier</div>
 
-                        <div class="ellipse-11 ellipse-dot" @onclick="() => OnDotClick(campNo, refNo)"></div>
-                        <div class="ellipse-12 ellipse-dot" @onclick="() => OnDotClick(campNo, refNo)"></div>
-                        <div class="ellipse-13 ellipse-dot" @onclick="() => OnDotClick(campNo, refNo)"></div>
+                        <div class="ellipse-11 ellipse-dot" @onclick="() => OnDotClick(campNo, refNo)" data-bs-toggle="tooltip" title="Campaign Manager details"></div>
+                        <div class="ellipse-12 ellipse-dot" @onclick="() => OnDotClick(campNo, refNo)" data-bs-toggle="tooltip" title="Campaign Manager details"></div>
+                        <div class="ellipse-13 ellipse-dot" @onclick="() => OnDotClick(campNo, refNo)" data-bs-toggle="tooltip" title="Campaign Manager details"></div>
                     </div>
                     <div class="line-3"></div>
                 }
@@ -235,13 +249,13 @@
 
         </div>
     </div>
-    <div class="card-footer">
+   @*  <div class="card-footer">
         <Pagination CurrentPage="@CurrentPage"
                     TotalPages="@TotalPages"
                     TotalItems="@Campaigns.Count"
                     PageSize="@PageSize"
                     OnPageChanged="ChangePage" />
-    </div>
+    </div> *@
     @* @if (TotalPages > 1)
     {
         <div class="pagination">

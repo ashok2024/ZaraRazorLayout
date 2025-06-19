@@ -65,34 +65,45 @@
 }
 <div class="pagination-wrapper">
     <div class="showing-1-to-10-of-52-entries">
-        <span>
-            <span class="showing-1-to-10-of-52-entries-span2">
-                Showing @ShowingFrom to @ShowingTo of @TotalItems entries
-            </span>
+        <span class="showing-1-to-10-of-52-entries-span2">
+            Showing @ShowingFrom to @ShowingTo of @TotalItems entries
         </span>
     </div>
 
-    <div class="group-175314">
-        @foreach (var page in GetPageNumbers())
-        {
-            if (page is int p)
+    @if (TotalPages > 1)
+    {
+        <div class="group-175314">
+            <!-- Left Arrow (Only show if not on first page) -->
+            @if (CurrentPage > 1)
             {
-                var cssClass = p == CurrentPage ? $"_{p} active" : $"_{p}";
-                <div class="@cssClass" @onclick="@(() => GoToPage(p))" style="cursor:pointer">@p</div>
+                <img class="icon-material-round-keyboard-arrow-right2"
+                     src="/images/icons/Icon material-round-keyboard-arrow-right.png"
+                     @onclick="NextPage"
+                     style="cursor:pointer; transform: rotate(180deg);" />
             }
-            else if (page is string s)
+
+            <!-- Page Numbers -->
+            @foreach (var page in GetPageNumbers())
             {
-                <div class="div">@s</div>
+                if (page is int p)
+                {
+                    var cssClass = p == CurrentPage ? $"_active-page" : $"_page";
+                    <div class="@cssClass" @onclick="@(() => GoToPage(p))" style="cursor:pointer">@p</div>
+                }
+                else if (page is string s)
+                {
+                    <div class="ellipsis">@s</div>
+                }
             }
-        }
-        <!-- Right arrow icon to go to next page -->
-        <img class="icon-material-round-keyboard-arrow-right"
-             src="/images/icons/icon-material-round-keyboard-arrow-right0.png"
-             @onclick="NextPage"
-             style="cursor:pointer" />
-        <img class="icon-material-round-keyboard-arrow-right2"
-             src="/images/icons/Icon material-round-keyboard-arrow-right.png"
-             @onclick="NextPage"
-             style="cursor:pointer" />
-    </div>
+
+            <!-- Right Arrow (Only show if not on last page) -->
+            @if (CurrentPage < TotalPages)
+            {
+                <img class="icon-material-round-keyboard-arrow-right"
+                     src="/images/icons/icon-material-round-keyboard-arrow-right0.png"
+                     @onclick="NextPage"
+                     style="cursor:pointer" />
+            }
+        </div>
+    }
 </div>

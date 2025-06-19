@@ -1,0 +1,237 @@
+﻿.no-record-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh; /* Adjust based on your layout */
+    text-align: center;
+}
+
+.no-record-image {
+    width: 100px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.no-record-text {
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #0a0a0a;
+    margin-bottom: 1rem;
+}
+
+.btn-primary {
+    background-color: #1c3258;
+    border-color: #1c3258;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.add-files,
+.add-files * {
+    box-sizing: border-box;
+}
+
+.add-files {
+    color: #0a0a0a;
+    text-align: left;
+    font-family: "Nunito-Bold", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    position: relative;
+}
+
+.add-files-span {
+}
+
+.add-files-span2 {
+    color: var(--black, #0a0a0a);
+}
+
+.file-description,
+.file-description * {
+    box-sizing: border-box;
+}
+
+.file-description {
+    color: #0a0a0a;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+}
+
+.file-description-span {
+}
+
+.file-description-span2 {
+    color: var(--black, #0a0a0a);
+}
+
+.group-175402,
+.group-175402 * {
+    box-sizing: border-box;
+}
+
+.group-175402 {
+    height: 35px;
+    position: relative;
+}
+
+.rectangle-156031 {
+    background: var(--white, #ffffff);
+    border-radius: 7px;
+    border-style: solid;
+    border-color: #6f6f6f;
+    border-width: 1px;
+    opacity: 0.3;
+    width: 597px;
+    height: 35px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.type-here {
+    color: #6f6f6f;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    left: 16px;
+    top: 8px;
+}
+
+.type-here-span {
+}
+
+.type-here-span2 {
+    text-transform: lowercase;
+}
+
+.group-175472,
+.group-175472 * {
+    box-sizing: border-box;
+}
+
+.group-175472 {
+    height: 35px;
+    position: relative;
+}
+
+.rectangle-156031 {
+    background: var(--white, #ffffff);
+    border-radius: 7px;
+    border-style: solid;
+    border-color: #6f6f6f;
+    border-width: 1px;
+    opacity: 0.3;
+    width: 461px;
+    height: 35px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.select-file-category {
+    color: #6f6f6f;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    left: 16px;
+    top: 8px;
+}
+
+.select-file-category-span {
+}
+
+.select-file-category-span2 {
+    text-transform: lowercase;
+}
+
+.send-to-stores,
+.send-to-stores * {
+    box-sizing: border-box;
+}
+
+.send-to-stores {
+    color: #0a0a0a;
+    text-align: left;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+}
+
+.send-to-stores-span {
+}
+
+.send-to-stores-span2 {
+    color: var(--black, #0a0a0a);
+}
+
+.check-box,
+.check-box * {
+    box-sizing: border-box;
+}
+
+.check-box {
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+
+.rectangle-1 {
+    border-radius: 4px;
+    border-style: solid;
+    border-color: var(--gray-6, #d1d1d6);
+    border-width: 1px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 0%;
+    left: 0%;
+    bottom: 0%;
+    top: 0%;
+}
+
+.rectangle-156061,
+.rectangle-156061 * {
+    box-sizing: border-box;
+}
+
+.rectangle-156061 {
+    background: var(--white, #ffffff);
+    border-radius: 7px;
+    border-style: solid;
+    border-color: #6f6f6f;
+    border-width: 1px;
+    opacity: 0.3;
+    height: 273px;
+    position: relative;
+}
+.btn-primary-chooseFile {
+    background-color: #1c3258;
+    border-color: #1c3258;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 131px !important;
+    color:white;
+    margin-left:306px !important;
+}
+.btn-primary-outline-Add {
+    border-color: #1c3258;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}

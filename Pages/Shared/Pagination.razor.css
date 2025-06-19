@@ -1,133 +1,55 @@
-﻿.showing-1-to-10-of-52-entries,
-.showing-1-to-10-of-52-entries * {
-    box-sizing: border-box;
-}
-
-.showing-1-to-10-of-52-entries {
-    color: #1c3258;
-    text-align: left;
-    font-family: "Nunito-SemiBold", sans-serif;
-    font-size: 16px;
-    line-height: 33px;
-    font-weight: 600;
-    position: relative;
-}
-
-.showing-1-to-10-of-52-entries-span {
-}
-
-.showing-1-to-10-of-52-entries-span2 {
-    color: var(--primary, #1c3258);
-}
-.group-175314,
-.group-175314 * {
-    box-sizing: border-box;
-}
-
-.group-175314 {
-    width: 243px;
-    height: 33px;
-    position: relative;
-}
-
-._1 {
-    color: #1c3258;
-    text-align: left;
-    font-family: "Nunito-ExtraBold", sans-serif;
-    font-size: 16px;
-    line-height: 33px;
-    font-weight: 800;
-    position: absolute;
-    right: 200.88px;
-    left: 32.123046875px;
-    bottom: 0px;
-    top: 0px;
-}
-
-._2 {
-    color: #6f6f6f;
-    text-align: left;
-    font-family: "Nunito-Medium", sans-serif;
-    font-size: 16px;
-    line-height: 33px;
-    font-weight: 500;
-    position: absolute;
-    right: 163.88px;
-    left: 69.123046875px;
-    bottom: 0px;
-    top: 0px;
-}
-
-._3 {
-    color: #6f6f6f;
-    text-align: left;
-    font-family: "Nunito-Medium", sans-serif;
-    font-size: 16px;
-    line-height: 33px;
-    font-weight: 500;
-    position: absolute;
-    right: 123.88px;
-    left: 109.123046875px;
-    bottom: 0px;
-    top: 0px;
-}
-
-.div {
-    color: #6f6f6f;
-    text-align: left;
-    font-family: "Nunito-Medium", sans-serif;
-    font-size: 16px;
-    line-height: 33px;
-    font-weight: 500;
-    position: absolute;
-    right: 81.88px;
-    left: 149.123046875px;
-    bottom: 0px;
-    top: 0px;
-}
-
-._10 {
-    color: #6f6f6f;
-    text-align: left;
-    font-family: "Nunito-Medium", sans-serif;
-    font-size: 16px;
-    line-height: 33px;
-    font-weight: 500;
-    position: absolute;
-    right: 29.88px;
-    left: 193.123046875px;
-    bottom: 0px;
-    top: 0px;
-}
-
-._10-span {
-}
-
-._10-span2 {
-    color: var(--grey-text-and-borders, #6f6f6f);
-}
-
-.icon-material-round-keyboard-arrow-right {
-    width: 9.88px;
-    height: 16.76px;
-    position: absolute;
-    left: 233.12px;
-    top: 7.62px;
-    overflow: visible;
-}
-
-.icon-material-round-keyboard-arrow-right2 {
-    width: 9.88px;
-    height: 16.76px;
-    position: absolute;
-    left: 0px;
-    top: 7.62px;
-    overflow: visible;
-}
+﻿/* Wrapper for entire pagination section */
 .pagination-wrapper {
     display: flex;
-    justify-content: space-between; /* or flex-start if you want left alignment */
+    justify-content: space-between;
     align-items: center;
-    width: 100%; /* or a fixed width if needed */
-    padding: 10px; /* optional spacing */
+    width: 100%;
+    padding: 10px 0;
+    flex-wrap: wrap;
+}
+
+/* Text: "Showing x to y of z entries" */
+.showing-1-to-10-of-52-entries {
+    color: #1c3258;
+    font-family: "Nunito-SemiBold", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Container for page numbers and arrows */
+.group-175314 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Default page number style */
+._page,
+.ellipsis {
+    color: #6f6f6f;
+    font-family: "Nunito-Medium", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Active page number */
+._active-page {
+    color: #1c3258;
+    font-family: "Nunito-ExtraBold", sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+/* Pagination arrows */
+.icon-material-round-keyboard-arrow-right,
+.icon-material-round-keyboard-arrow-right2 {
+    width: 12px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* Rotate left arrow */
+.icon-material-round-keyboard-arrow-right2 {
+    transform: rotate(180deg);
 }

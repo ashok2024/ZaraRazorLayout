@@ -2,7 +2,7 @@
 <div class="navbar-shared">
     <div class="nav-left">
         <div class="group-175409">
-            <div class="deta-ils @(selectedTab == TabType.Details ? "active-tab" : "")"
+            <div class="@(selectedTab == TabType.Details ? "active-tab" : "")"
                  @onclick="() => SelectTab(TabType.Details)">
                 <span><span class="deta-ils-span2">Details</span></span>
             </div>
@@ -16,6 +16,7 @@
             </div>
             <div class="stores @(selectedTab == TabType.Stores ? "active-tab" : "")"
                  @onclick="() => SelectTab(TabType.Stores)">
+
                 Stores
             </div>
             <div class="files @(selectedTab == TabType.Files ? "active-tab" : "")"
@@ -30,18 +31,26 @@
     </div>
 
     <div class="nav-right">
-        <div class="group-175410">
-            <button class="shared-button">
-                <img class="icon-akar-download" src="/images/icons/icon akar-download.png" alt="Download" />
-                Export campaign list
-            </button>
-        </div>
-        <div class="group-175411">
-            <button class="shared-button">
-                <img class="icon-material-add" src="/images/icons/Icon material-add.png" alt="Add" />
-                Add campaign list
-            </button>
-        </div>
+        @if (selectedTab == TabType.Stores)
+        {
+            <button type="submit" class="btn btn-primary px-4">Save</button>
+        }
+        else if (selectedTab == TabType.Details || selectedTab == TabType.Allocation || selectedTab == TabType.Elements )
+        {
+            <div class="group-175410">
+                <button class="shared-button">
+                    <img class="icon-akar-download" src="/images/icons/icon akar-download.png" alt="Download" />
+                    Export campaign list
+                </button>
+            </div>
+            <div class="group-175411">
+                <button class="shared-button">
+                    <img class="icon-material-add" src="/images/icons/Icon material-add.png" alt="Add" />
+                    Add campaign list
+                </button>
+            </div>
+        }
+        
     </div>
 </div>
 @code {

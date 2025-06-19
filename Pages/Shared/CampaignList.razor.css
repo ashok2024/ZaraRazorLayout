@@ -2170,3 +2170,14 @@
 .hidden {
     display: none;
 }
+.my-scrollable-div::-webkit-scrollbar {
+    width: 8px;
+}
+
+.my-scrollable-div::-webkit-scrollbar-track {
+    background: #bfc3ca;
+}
+
+.my-scrollable-div::-webkit-scrollbar-thumb {
+    background-color: #1c3258;
+}

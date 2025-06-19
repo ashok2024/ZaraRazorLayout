@@ -1,4 +1,7 @@
-﻿
+﻿@code{
+    [Parameter]
+    public EventCallback OnTitleClicked { get; set; }
+}
 <div class="rectangle-156027">
     @if (string.IsNullOrEmpty(RefrenceNo) && string.IsNullOrEmpty(CampignNo))
     {
@@ -6,7 +9,8 @@
     }
     else
     {
-        <div class="campaign-manager">@Title
+        <div class="campaign-manager">
+            <a href="/campaign-manager" class="campaign-manager" @onclick="OnTitleClicked" style="text-decoration:none">@Title</a>
             <img  class="icon-material-round-keyboard-arrow-right"  src="/images/icons/icon-material-round-keyboard-arrow-right0.png"/>            
             <div class="clearance-event-campaign-ref-campaign-no-1806">
                 Clearance Event ,Campaign Ref:  @RefrenceNo  ,Campaign No: @CampignNo

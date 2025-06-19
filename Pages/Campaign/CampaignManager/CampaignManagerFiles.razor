@@ -1,0 +1,99 @@
+﻿
+
+@code {
+    private void OpenModal()
+    {
+        JS.InvokeVoidAsync("openFileModal");
+    }
+
+    private async Task HandleFileSelected(InputFileChangeEventArgs e)
+    {
+        var file = e.File;
+        Console.WriteLine($"Selected file: {file.Name}");
+        // Handle file here...
+    }
+
+    [Inject] private IJSRuntime JS { get; set; }
+}
+
+<div class="no-record-container">
+    <img class="no-record-image" src="/images/icons/NoRecordFound.png" alt="No Records" />
+    <div class="no-record-text">No Record(s) Found</div>
+    <div>
+        <button class="btn btn-primary px-4" onclick="openFileModal()">
+            <i class="bi bi-plus-lg me-1"></i>
+            Add File
+        </button>
+    </div>
+</div>
+
+<!-- Bootstrap Modal -->
+<!-- Modal -->
+<div class="modal fade" id="fileModal" tabindex="-1" aria-labelledby="fileModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content rounded-4">
+            <div class="modal-header border-0">
+                <h5 class="modal-title fw-bold">Add files</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body px-4">
+                <!-- File Description -->
+                <div class="mb-3 row align-items-center">
+                    <label for="fileDescription" class="col-sm-3 col-form-label fw-semibold">File description</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="fileDescription" placeholder="Type here" />
+                    </div>
+                </div>
+
+                <!-- File Category with Add New -->
+                <div class="mb-3 row align-items-center">
+                    <label for="fileCategory" class="col-sm-3 col-form-label fw-semibold">Select file category</label>
+                    <div class="col-sm-6">
+                        <select class="form-select" id="fileCategory">
+                            <option>Select file category</option>
+                            <option>Images</option>
+                            <option>Documents</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-3">
+                        <button type="button" class="btn btn-primary-outline-Add w-100">
+                            <i class="bi bi-plus-lg me-1"></i> Add new
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Send to Stores -->
+                <div class="mb-4 row">
+                    <div class="col-sm-3 fw-semibold">Send to stores</div>
+                    <div class="col-sm-9">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="sendToStores">
+                            <label class="form-check-label" for="sendToStores"></label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Upload Area -->
+                <div class="border rounded-3 py-5 text-center mb-4" style="background-color: #fafafa;">
+                    <img src="/images/icons/NoRecordFound.png" alt="No File" class="mb-3" width="40">
+                    <p class="text-muted m-0">Drag & Drop file here to upload</p>
+                    <div class="text-muted mb-2">OR</div>
+                    <div class="text-center">
+                        <label class="btn btn-primary-chooseFile     px-4">
+                            Choose file
+                            <input type="file" hidden />
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer border-0">
+                <button type="button" class="btn btn-primary-outline-Add" data-bs-dismiss="modal">Cancel</button>
+                <button type="submit" class="btn btn-primary">Upload</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+

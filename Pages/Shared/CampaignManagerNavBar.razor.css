@@ -306,3 +306,14 @@
         height: 16px;
         width: auto;
     }
+
+.active-tab {
+    font-weight: 700 !important;
+    opacity: 1 !important;
+    color: #1c3258 !important;
+}
+.btn-primary {
+    background-color: #1c3258;
+    border-color: #1c3258;
+    border-radius: 2rem;
+}

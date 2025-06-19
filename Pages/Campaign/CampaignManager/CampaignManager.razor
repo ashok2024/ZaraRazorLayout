@@ -2,7 +2,7 @@
 @using ZaraBlazorStandlone.Models
 @using ZaraBlazorStandlone.Pages.Shared
 
-<PageHeader Title="Campaign Manager" CampignNo="@selectedCampaignNo" RefrenceNo="@selectedReferenceNo" />
+<PageHeader Title="Campaign Manager" CampignNo="@selectedCampaignNo" RefrenceNo="@selectedReferenceNo" OnTitleClicked="HandleTitleClicked" />
 
 
 @if (isLoading)
@@ -24,6 +24,11 @@ else
                            ProjectManager="@search.ProjectManager"
                            OnSearchClicked="@LoadCampaigns" />
             <CampaignList Campaigns="@PagedCampaigns" OnSearchTextChangedFromChild="HandleSearchTextChanged" OnPageSizeChanged="HandlePageSizeChanged" OnCampaignSelected="OnCampaignSelected" />
+            <Pagination CurrentPage="@CurrentPage"
+                        TotalPages="@TotalPages"
+                        TotalItems="@PagedCampaigns.Count"
+                        PageSize="@PageSize"
+                        OnPageChanged="ChangePage" />
         </div>
     }
     else
@@ -53,6 +58,7 @@ else
     private void HandlePageSizeChanged(int newPageSize)
     {
 
+        Console.WriteLine("newPageSize is  " + newPageSize);
         if (newPageSize == -1)
         {
             PageSize = AllCampaigns.Count; // Show all records
@@ -62,6 +68,11 @@ else
             PageSize = newPageSize;
         }
         CurrentPage = 1;
+        LoadCampaigns();
+    }
+    private void ChangePage(int newPage)
+    {
+        CurrentPage = newPage;
         LoadCampaigns();
     }
     private string selectedCampaignNo;
@@ -86,6 +97,10 @@ else
     {
 
         ApplyGlobalSearch(newText);
+    }
+    private void HandleTitleClicked()
+    {
+        showCampaignDetails = false;
     }
     protected override void OnInitialized()
     {
@@ -433,12 +448,19 @@ else
             // If ProjectManager is used in filtering, add it here
 
             // Pagination
+
+            
             int totalItems = filtered.Count();
+            Console.WriteLine("totalItems: " + totalItems);
             TotalPages = (int)Math.Ceiling(totalItems / (double)PageSize);
+            Console.WriteLine("TotalPages: " + TotalPages);
+            Console.WriteLine("CurrentPage: " + CurrentPage);
             PagedCampaigns = filtered
                 .Skip((CurrentPage - 1) * PageSize)
                 .Take(PageSize)
                 .ToList();
+
+           
         }
         catch (Exception ex)
         {
@@ -480,11 +502,7 @@ else
             .Take(PageSize)
             .ToList();
     }
-    private void ChangePage(int newPage)
-    {
-        CurrentPage = newPage;
-        LoadCampaigns();
-    }
+
 
     // Models
     public class SearchModel

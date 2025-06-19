@@ -39,9 +39,9 @@
         <table class="table table-bordered align-middle text-center campaign-table mt-3">
             <thead class="bg-info bg-opacity-10">
                 <tr>
-                    <th class="border-0 tr-custome-bg-color element-code">Store number</th>
-                    <th class="border-0 tr-custome-bg-color element-code">Store name</th>
-                    <th class="border-0 tr-custome-bg-color element-code">include campaign <input type="checkbox" id="selectAll" onclick="toggleAll(this)" /> </th>
+                    <th class="border-0 tr-custome-bg-color element-code text-start">Store number</th>
+                    <th class="border-0 tr-custome-bg-color element-code text-start">Store name</th>
+                    <th class="border-0 tr-custome-bg-color element-code text-start">include campaign <input type="checkbox" id="selectAll" onclick="toggleAll(this)" /> </th>
                 </tr>
             </thead>
             <tbody>
@@ -49,9 +49,9 @@
                 {
 
                     <tr class="custom-row-style">
-                        <td class="td-custome-b-none tr-text-custome ">@item.StoreNumber</td>
-                        <td class="td-custome-b-none tr-text-custome">@item.StoreName</td>
-                        <td class="td-custome-b-none tr-text-custome rowCheckbox"><input type="checkbox" value="@item.IncludeCampaign" onclick="updateSelectAll()" /></td>
+                        <td class="td-custome-b-none tr-text-custome text-start">@item.StoreNumber</td>
+                        <td class="td-custome-b-none tr-text-custome text-start">@item.StoreName</td>
+                        <td class="td-custome-b-none tr-text-custome rowCheckbox text-start"><input type="checkbox" value="@item.IncludeCampaign" onclick="updateSelectAll()" /></td>
                     </tr>
                 }
             </tbody>
@@ -93,7 +93,7 @@
     {
         SearchText = e.Value?.ToString();
         string keyword = SearchText?.Trim();
-
+        campaignStoreItemsfilterd = campaignStoreItems;
         IEnumerable<CampaignStoreItem> filtered = campaignStoreItemsfilterd;
 
         if (!string.IsNullOrWhiteSpace(keyword))

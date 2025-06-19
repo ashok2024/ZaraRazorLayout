@@ -20,3 +20,13 @@ function updateSelectAll() {
     const allChecked = Array.from(checkboxes).every(cb => cb.checked);
     document.getElementById('selectAll').checked = allChecked;
 }
+window.openFileModal = () => {
+    var modal = new bootstrap.Modal(document.getElementById('fileModal'));
+    modal.show();
+};
+document.addEventListener('DOMContentLoaded', function () {
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.forEach(function (el) {
+        new bootstrap.Tooltip(el);
+    });
+});
